@@ -1,0 +1,56 @@
+// FONT VARIABLES
+$font-en: 'Didact Gothic', sans-serif;
+$font-zh: 'Noto Sans TC', sans-serif;
+$default-font-size: 1.6rem;
+
+// Responsive Breakpoints
+$bp-largest: 75em;          // 1200px
+$bp-large: 64.5em;          // 1032px
+$bp-medium: 52em;           // 832px
+$bp-small: 37.5em;          // 600px
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 62.5%;           // 10px/16px = 62.5% -> 1rem = 10px
+    
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 37.5%;       // 6px/16px = 37.5% -> 1rem = 6px
+    }
+}
+
+#info {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 2rem;
+    z-index: 99;
+    font-size: 2rem;
+}
+
+#progressBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    width: 1rem;
+    z-index: 999;
+}

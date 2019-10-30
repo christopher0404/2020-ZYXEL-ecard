@@ -1,0 +1,13 @@
+.footer {
+    position: fixed;
+    width: 100vw;
+    bottom: 5%;
+    z-index: 90;
+
+    &-copyright {
+        position: absolute;
+        left: 2%;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}

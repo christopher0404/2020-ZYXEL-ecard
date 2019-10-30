@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>20191024_ZYXEL</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="info">0</div>
+    <div id="progressBar"
+         data-start="height: 0%;"
+         data-end="height: 100%;">
+    </div>
+
+    <div id="skrollr-body">
+        <div class="scene-1-bg-1">
+            <img src="img/sun.png" alt="sun" class="scene-1-sun" 
+                data-anchor-target=".scene-1-bg-2"
+                data-100p-top="transform: scale(1) translateY(0rem) translateX(0rem);" 
+                data-50p-top="transform: scale(0.28) translateY(250rem) translateX(60rem);">
+            <p class="paragraph p-page-1" 
+                data-anchor-target=".scene-1-bg-1_5"
+                data-bottom-top="transform: translateY(0px);"
+                data-top-bottom="transform: translateY(-600px);">
+                The beginning of a new year
+            </p>
+        </div>
+
+        <div class="scene-1-bg-1_5"></div>
+
+        <div class="scene-1-bg-2">
+            <!-- data-anchor-target=".scene-1-bg-1_5"
+            data-bottom-top="position: relative; top: 0%; left: 0;"
+            data--50p-top="position: fixed; top: 10%; left: 0;"> -->
+
+            <img src="img/twoMenOnTheBoat.png" class="scene-1-boat" 
+                data-anchor-target=".scene-1-bg-1_5"
+                data-top="transform: scale(1) translateX(0rem) translateY(0rem)"
+                data--100p-bottom="transform: scale(1) translateX(0rem) translateY(0rem)"
+                data--200p-bottom="transform: scale(5) translateX(-22rem) translateY(-11rem)">
+
+            <p class="paragraph p-page-2" 
+                data-anchor-target=".scene-1-bg-2_5"
+                data-start="transform: translateX(-120%);"
+                data-bottom-top="transform: translateX(0%);"
+                data-95p-bottom="transform: translateX(0%);"
+                data-85p-bottom="transform: translateX(300%);">
+                Want to explore the world with you
+            </p>
+
+            <p class="paragraph p-page-3" 
+                data-anchor-target=".scene-1-bg-2_5"
+                data-85p-bottom="transform: translateX(-300%);"
+                data-75p-bottom="transform: translateX(0%);">
+                Let's discover the unknown !
+            </p>
+        </div>
+
+        <div class="scene-1-bg-2_5"></div>
+
+        <div class="scene2-bg1">
+            <img src="img/moon.png" alt="moon" class="scene2-bg1-moon">
+
+            <img src="img/forest-01.png" alt="forest" class="scene2-bg1-forest"
+                data-anchor-target=".scene2-bg1_5"
+                data-bottom-top="transform: translateX(10%) translateY(0%);"
+                data-25p-bottom="transform: translateX(-5%) translateY(2%);">
+
+            <img src="img/hill_underbrush.png" alt="hill" class="scene2-bg1-hill">
+            <img src="img/eyes.svg" class="scene2-bg1-eyes">
+
+            <img src="img/man-right.png" alt="" class="scene2-bg1-manRight"
+                data-anchor-target=".scene2-bg1_5"
+                data--150p-top="transform: rotate(0deg)"
+                data--125p-top="transform: rotate(5deg)"
+                data--100p-top="transform: rotate(0deg)"
+                data--75p-top="transform: rotate(5deg)"
+                data--50p-top="transform: rotate(0deg)"
+                data--25p-top="transform: rotate(5deg)"
+                data-top="transform: rotate(0deg)"
+                data-25p-top="transform: rotate(5deg)"
+                data-50p-top="transform: rotate(0deg)"
+                data-75p-top="transform: rotate(5deg)"
+                data-100p-top="transform: rotate(0deg)">
+
+            <img src="img/man-left.png" alt="" class="scene2-bg1-manLeft"
+                data-anchor-target=".scene2-bg1_5"
+                data--125p-top="transform: rotate(0deg)"
+                data--100p-top="transform: rotate(5deg)"
+                data--75p-top="transform: rotate(0deg)"
+                data--50p-top="transform: rotate(5deg)"
+                data--25p-top="transform: rotate(0deg)"
+                data-top="transform: rotate(5deg)"
+                data-25p-top="transform: rotate(0deg)"
+                data-50p-top="transform: rotate(5deg)"
+                data-75p-top="transform: rotate(0deg)"
+                data-100p-top="transform: rotate(5deg)"
+                data-150p-top="transform: rotate(0deg)">
+
+            <p class="paragraph p-page-4"
+                data-anchor-target=".scene2-bg1_5"
+                data-bottom-top="transform[sqrt]: scale(0)"
+                data-top="transform[sqrt]: scale(1)">
+                Be bold to dream !
+            </p>
+
+            <img src="img/forest-02.png" alt="forest" class="scene2-bg1-forest-front"
+                data-anchor-target=".scene2-bg1_5"
+                data-bottom-top="transform: translateX(500%)"
+                data-50p-bottom="transform: translateX(-25%)">
+        </div>
+
+        <div class="scene2-bg1_5"></div>
+
+        <div class="scene2-bg2"></div>
+
+        <div class="scene2-bg2_5"></div>
+
+    </div>
+
+    <footer class="footer">
+        <p class="footer-copyright">© 2019 ZYXEL</p>
+    </footer>
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/skrollr.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

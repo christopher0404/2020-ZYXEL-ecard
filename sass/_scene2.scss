@@ -1,0 +1,73 @@
+.scene2 {
+    &-bg1 {
+        background: #132528 no-repeat center;
+        background-size: cover;
+        height: 101rem;
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+
+        &-moon {
+            position: absolute;
+            top: 20rem;
+            left: 20vw;
+            width: 23rem;
+    
+            @media only screen and (max-width: $bp-medium) {
+                width: 18rem;
+            }
+        }
+    
+        &-forest {
+            position: absolute;
+            top: -35rem;
+    
+            &-front {
+                position: absolute;
+                bottom: -85rem;
+            }
+        }
+    
+        &-hill {
+            position: absolute;
+            bottom: 0;
+            height: 81rem;
+        }
+    
+        &-eyes {
+            position: absolute;
+            bottom: 7rem;
+            width: 148rem;
+        }
+
+        &-manRight {
+            position: absolute;
+            bottom: 20rem;
+            left: 50vw;
+            height: 50rem;
+    
+            @media only screen and (max-width: $bp-medium) {
+                left: 25vw;
+            }
+        }
+
+        &-manLeft {
+            position: absolute;
+            bottom: 10rem;
+            left: 25vw;
+            height: 45rem;
+    
+            @media only screen and (max-width: $bp-medium) {
+                left: -10vw;
+            }
+        }
+    }
+
+    &-bg1_5 {
+        // position: relative;
+        background-color: #CBD0D5;
+        height: 300rem;
+    }
+}

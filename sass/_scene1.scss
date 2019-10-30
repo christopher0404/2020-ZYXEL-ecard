@@ -1,0 +1,54 @@
+.scene-1 {
+    &-bg-1 {
+    position: relative;
+    background: url("../img/sky_clouds.png") no-repeat center;
+    background-size: cover;
+    height: 81rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: 2; */
+    }
+    &-bg-1_5 {
+        position: relative;
+        background-color: #ADE6E6;
+        height: 20rem;
+    }
+    &-bg-2 {
+        background: #ADE6E6 url("../img/ocean_clouds.png") no-repeat center;
+        background-size: cover;
+        height: 101rem;
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        // z-index: 1;
+    }
+    &-bg-2_5 {
+        background-color: #418BCE;
+        height: 161rem;
+    }
+
+    &-sky {
+        width: 100vw;
+    }
+
+    &-sun {
+        position: absolute;
+        top: 15rem;
+        width: 48rem;
+        z-index: 2;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 36rem;
+        }
+    }
+
+    &-boat {
+        position: absolute;
+        top: 20rem;
+        width: 62rem;
+        height: 50rem;
+    }
+}
