@@ -13,7 +13,7 @@ var s = skrollr.init({
 // }
 
 // ScrollReveal().reveal('.scene-1-bg-2');
-
+/*
 window.addEventListener('scroll', function(e) {
     const target = document.querySelectorAll('.scroll');
 
@@ -30,3 +30,4 @@ window.addEventListener('scroll', function(e) {
         }
     }
 });
+*/

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div id="info">0</div>
     <div id="progressBar"
@@ -17,52 +18,73 @@
     </div>
 
     <div id="skrollr-body">
-        <div class="scene-1-bg-1">
-            <img src="img/sun.png" alt="sun" class="scene-1-sun" 
-                data-anchor-target=".scene-1-bg-2"
+        <div class="scene1-bg1">
+            <img src="img/sun.png" alt="sun" class="scene1-sun" 
+                data-anchor-target=".scene1-bg2"
                 data-100p-top="transform: scale(1) translateY(0rem) translateX(0rem);" 
                 data-50p-top="transform: scale(0.28) translateY(250rem) translateX(60rem);">
             <p class="paragraph p-page-1" 
-                data-anchor-target=".scene-1-bg-1_5"
-                data-bottom-top="transform: translateY(0px);"
-                data-top-bottom="transform: translateY(-600px);">
-                The beginning of a new year
+                data-anchor-target=".scene1-bg1_5"
+                data-100p-top="transform: translateY(0%);"
+                data-center-bottom="transform: translateY(-1000%);">
+                It's the beginning of a brand new year
             </p>
         </div>
 
-        <div class="scene-1-bg-1_5"></div>
+        <div class="scene1-bg1_5"></div>
 
-        <div class="scene-1-bg-2">
-            <!-- data-anchor-target=".scene-1-bg-1_5"
+        <div class="scene1-bg2"
+            data-anchor-target=".scene1-bg2_5"
+            data-75p-bottom="opacity: 1;"
+            data-55p-bottom="opacity: 0;">
+            <!-- data-anchor-target=".scene1-bg1_5"
             data-bottom-top="position: relative; top: 0%; left: 0;"
             data--50p-top="position: fixed; top: 10%; left: 0;"> -->
 
-            <img src="img/twoMenOnTheBoat.png" class="scene-1-boat" 
-                data-anchor-target=".scene-1-bg-1_5"
-                data-top="transform: scale(1) translateX(0rem) translateY(0rem)"
-                data--100p-bottom="transform: scale(1) translateX(0rem) translateY(0rem)"
-                data--200p-bottom="transform: scale(5) translateX(-22rem) translateY(-11rem)">
+            <img src="img/twoMenOnTheBoat-00.svg" class="scene1-boat-00" 
+                data-anchor-target=".scene1-bg2_5"
+                data-400p-bottom="transform: scale(1) translateX(0rem) translateY(0rem); display: block;"
+                data-260p-bottom="transform: scale(1) translateX(0rem) translateY(0rem); display: block;"
+                data-180p-bottom="transform: scale(5) translateX(-22rem) translateY(-10rem); display: none;">
+
+            <img src="img/twoMenOnTheBoat-01.svg" class="scene1-boat-02" 
+                data-anchor-target=".scene1-bg2_5"
+                data-190p-bottom="display: none; transform: translateX(-102rem);"
+                data-180p-bottom="display: block; transform: translateX(-102rem);"
+                data-170p-bottom="display: none; transform: translateX(-102rem);">
+
+            <img src="img/twoMenOnTheBoat-02.svg" class="scene1-boat-02" 
+                data-anchor-target=".scene1-bg2_5"
+                data-180p-bottom="display: none; transform: scale(1) translateX(-102rem); opacity: 1;"
+                data-170p-bottom="display: block; transform: scale(1) translateX(-102rem); opacity: 1;"
+                data-150p-bottom="display: block; transform: scale(1) translateX(-102rem); opacity: 1;"
+                data-75p-bottom="display: block; transform: scale(50) translateX(-102rem); opacity: 1;"
+                data-15p-bottom="display: block; transform: scale(50) translateX(-102rem); opacity: 0;">
 
             <p class="paragraph p-page-2" 
-                data-anchor-target=".scene-1-bg-2_5"
-                data-start="transform: translateX(-120%);"
-                data-bottom-top="transform: translateX(0%);"
-                data-95p-bottom="transform: translateX(0%);"
-                data-85p-bottom="transform: translateX(300%);">
-                Want to explore the world with you
+                data-anchor-target=".scene1-bg1_5"
+                data--25p-bottom="transform: translateX(-1000%);"
+                data--45p-bottom="transform: translateX(0%);"
+                data--100p-bottom="transform: translateX(0%);"
+                data--120p-bottom="transform: translateX(1000%);">
+                We look forward to exploring the world with you
             </p>
 
             <p class="paragraph p-page-3" 
-                data-anchor-target=".scene-1-bg-2_5"
-                data-85p-bottom="transform: translateX(-300%);"
-                data-75p-bottom="transform: translateX(0%);">
-                Let's discover the unknown !
+                data-anchor-target=".scene1-bg2_5"
+                data-200p-bottom="transform: translateX(-1000%);"
+                data-180p-bottom="transform: translateX(0%);"
+                data-150p-bottom="transform: translateX(0%);"
+                data-120p-bottom="transform: translateX(1000%);">
+                ...for endless and magnificent new opportunities
             </p>
         </div>
 
-        <div class="scene-1-bg-2_5"></div>
+        <div class="scene2-bg1"
+            data-anchor-target=".scene1-bg2_5"
+            data-75p-bottom="opacity: 0;"
+            data-15p-bottom="opacity: 1;">
 
-        <div class="scene2-bg1">
             <img src="img/moon.png" alt="moon" class="scene2-bg1-moon">
 
             <img src="img/forest-01.png" alt="forest" class="scene2-bg1-forest"
@@ -105,14 +127,16 @@
                 data-anchor-target=".scene2-bg1_5"
                 data-bottom-top="transform[sqrt]: scale(0)"
                 data-top="transform[sqrt]: scale(1)">
-                Be bold to dream !
+                It takes courage to chase your dreams...
             </p>
 
-            <img src="img/forest-02.png" alt="forest" class="scene2-bg1-forest-front"
+            <img src="img/forest-03.png" alt="forest" class="scene2-bg1-forest-front"
                 data-anchor-target=".scene2-bg1_5"
                 data-bottom-top="transform: translateX(500%)"
                 data-50p-bottom="transform: translateX(-25%)">
         </div>
+
+        <div class="scene1-bg2_5"></div>
 
         <div class="scene2-bg1_5"></div>
 

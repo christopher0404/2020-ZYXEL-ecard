@@ -33,7 +33,7 @@ html {
 #progressBar {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: #fff;
   width: 1rem;
   z-index: 999; }
@@ -45,8 +45,9 @@ html {
 
 .p-page-1 {
   position: absolute;
-  top: 50rem;
+  bottom: 10rem;
   margin: 0 auto;
+  text-align: center;
   z-index: 3; }
 
 .p-page-2 {
@@ -63,11 +64,13 @@ html {
 .p-page-3 {
   position: absolute;
   top: 10%; }
-  @media only screen and (max-width: 52em) {
-    .p-page-3 {
-      top: 10%; } }
 
-.scene-1-bg-1 {
+.p-page-4 {
+  position: absolute;
+  top: 10%;
+  color: #fff; }
+
+.scene1-bg1 {
   position: relative;
   background: url("../img/sky_clouds.png") no-repeat center;
   background-size: cover;
@@ -77,42 +80,47 @@ html {
   align-items: center;
   /* z-index: 2; */ }
 
-.scene-1-bg-1_5 {
+.scene1-bg1_5 {
   position: relative;
   background-color: #ADE6E6;
   height: 20rem; }
 
-.scene-1-bg-2 {
+.scene1-bg2 {
   background: #ADE6E6 url("../img/ocean_clouds.png") no-repeat center;
   background-size: cover;
   height: 101rem;
   position: sticky;
   top: 0;
-  overflow: hidden;
   display: flex;
   justify-content: center; }
 
-.scene-1-bg-2_5 {
+.scene1-bg2_5 {
   background-color: #418BCE;
-  height: 161rem; }
+  height: 201rem; }
 
-.scene-1-sky {
+.scene1-sky {
   width: 100vw; }
 
-.scene-1-sun {
+.scene1-sun {
   position: absolute;
   top: 15rem;
   width: 48rem;
   z-index: 2; }
   @media only screen and (max-width: 52em) {
-    .scene-1-sun {
+    .scene1-sun {
       width: 36rem; } }
 
-.scene-1-boat {
+.scene1-boat-00 {
   position: absolute;
   top: 20rem;
   width: 62rem;
   height: 50rem; }
+
+.scene1-boat-02 {
+  position: absolute;
+  bottom: -7rem;
+  height: 230rem;
+  transform-origin: 51.18% 72.3%; }
 
 .scene2-bg1 {
   background: #132528 no-repeat center;
@@ -126,10 +134,17 @@ html {
   .scene2-bg1-moon {
     position: absolute;
     top: 20rem;
-    left: 20vw; }
+    left: 20vw;
+    width: 23rem; }
+    @media only screen and (max-width: 52em) {
+      .scene2-bg1-moon {
+        width: 18rem; } }
   .scene2-bg1-forest {
     position: absolute;
     top: -35rem; }
+    .scene2-bg1-forest-front {
+      position: absolute;
+      bottom: 0rem; }
   .scene2-bg1-hill {
     position: absolute;
     bottom: 0;
@@ -156,8 +171,20 @@ html {
         left: -10vw; } }
 
 .scene2-bg1_5 {
-  background-color: #132528;
-  height: 161rem; }
+  background-color: #CBD0D5;
+  height: 300rem; }
+
+.scene2-bg2 {
+  background: url("../img/page05.jpg") no-repeat center;
+  background-size: cover;
+  height: 101rem;
+  position: relative; }
+
+.scene2-bg2_5 {
+  background: #fff no-repeat center;
+  background-size: cover;
+  height: 101rem;
+  position: relative; }
 
 .footer {
   position: fixed;
