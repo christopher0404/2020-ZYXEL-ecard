@@ -70,6 +70,11 @@ html {
   top: 10%;
   color: #fff; }
 
+.p-page-5 {
+  position: absolute;
+  top: 65%;
+  color: #fff; }
+
 .scene1-bg1 {
   position: relative;
   background: url("../img/sky_clouds.png") no-repeat center;
@@ -141,10 +146,13 @@ html {
         width: 18rem; } }
   .scene2-bg1-forest {
     position: absolute;
-    top: -35rem; }
+    top: -60rem;
+    width: 232rem; }
     .scene2-bg1-forest-front {
       position: absolute;
-      bottom: 0rem; }
+      bottom: 0rem;
+      width: 400rem;
+      z-index: 2; }
   .scene2-bg1-hill {
     position: absolute;
     bottom: 0;
@@ -171,20 +179,58 @@ html {
         left: -10vw; } }
 
 .scene2-bg1_5 {
+  position: relative;
   background-color: #CBD0D5;
-  height: 300rem; }
+  height: 600rem;
+  z-index: -1; }
 
 .scene2-bg2 {
-  background: url("../img/page05.jpg") no-repeat center;
+  background: #132528 url("../img/mountain.png") no-repeat center;
   background-size: cover;
-  height: 101rem;
-  position: relative; }
-
-.scene2-bg2_5 {
-  background: #fff no-repeat center;
-  background-size: cover;
-  height: 101rem;
-  position: relative; }
+  width: 192rem;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .scene2-bg2-moon {
+    position: absolute;
+    top: 10rem;
+    left: 10%;
+    width: 21rem; }
+    @media only screen and (max-width: 52em) {
+      .scene2-bg2-moon {
+        left: 5%;
+        width: 18rem; } }
+  .scene2-bg2-hiker-1 {
+    position: absolute;
+    top: 57%;
+    left: 33%; }
+    @media only screen and (max-width: 52em) {
+      .scene2-bg2-hiker-1 {
+        left: 20%; } }
+    @media only screen and (max-width: 37.5em) {
+      .scene2-bg2-hiker-1 {
+        left: 0%; } }
+  .scene2-bg2-hiker-2 {
+    position: absolute;
+    top: 53%;
+    left: 37%; }
+    @media only screen and (max-width: 52em) {
+      .scene2-bg2-hiker-2 {
+        top: 55%;
+        left: 25%; } }
+    @media only screen and (max-width: 37.5em) {
+      .scene2-bg2-hiker-2 {
+        left: 10%; } }
+  .scene2-bg2-hiker-3 {
+    position: absolute;
+    top: 47%;
+    left: 55%; }
+  .scene2-bg2-hiker-4 {
+    position: absolute;
+    top: 48%;
+    left: 58.5%; }
 
 .footer {
   position: fixed;
