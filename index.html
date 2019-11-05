@@ -16,6 +16,10 @@
          data-start="height: 0%;"
          data-end="height: 100%;">
     </div>
+    
+    <div class="header">
+        <img src="img/components/nav.svg" class="header-nav">
+    </div>
 
     <div id="skrollr-body">
 
@@ -58,7 +62,7 @@
                 data-170p-bottom="display: block; transform: scale(1) translateX(-102rem); opacity: 1;"
                 data-150p-bottom="display: block; transform: scale(1) translateX(-102rem); opacity: 1;"
                 data-75p-bottom="display: block; transform: scale(50) translateX(-102rem); opacity: 1;"
-                data-15p-bottom="display: block; transform: scale(50) translateX(-102rem); opacity: 0;">
+                data-15p-bottom="display: none; transform: scale(50) translateX(-102rem); opacity: 0;">
 
             <p class="paragraph p-page-2" 
                 data-anchor-target=".scene1-bg1_5"
@@ -80,10 +84,17 @@
         </div>
 
 <!-- Scene2 -->
-        <div class="scene2-bg1"
+        <!-- <div class="scene2-bg1"
             data-anchor-target=".scene1-bg2_5"
-            data-75p-bottom="opacity: 0;"
-            data-15p-bottom="opacity: 1;">
+            data-75p-bottom="opacity: 0; display: flex;"
+            data-15p-bottom="opacity: 1; display: flex;"
+            data-end="opacity: 1; display: none;"> -->
+
+        <div class="scene2-bg1"
+            data-anchor-target=".scene2-bg1_5"
+            data-175p-top="opacity: 0; display: flex;"
+            data-100p-top="opacity: 1; display: flex;"
+            data--750p-top="opacity: 1; display: none;">
 
             <img src="img/moon.png" class="scene2-bg1-moon">
 
@@ -131,16 +142,48 @@
 
             <img src="img/forest-03.png" class="scene2-bg1-forest-front"
                 data-anchor-target=".scene2-bg1_5"
-                data--80p-top="transform: translateX(500%)"
+                data--80p-top="transform: translateX(200%)"
                 data--110p-top="transform: translateX(0%)"
-                data--150p-top="transform: translateX(-500%)">
+                data--150p-top="transform: translateX(-200%)">
 
+<!-- Scene2-bg2 -->
             <div class="scene2-bg2"
                 data-anchor-target=".scene2-bg1_5"
                 data--100p-top="display: none;"
-                data--110p-top="display: block;">
+                data--110p-top="display: flex;"
+                data--700p-top="display: none;">
 
-                <img src="img/moon.png" class="scene2-bg2-moon">
+                <img src="img/mountain-night-00.png" class="scene2-bg2-mountain"
+                    data-anchor-target=".scene2-bg1_5"
+                    data--190p-top="display: block;"
+                    data--200p-top="display: none;">
+
+                <img src="img/mountain-night-01.png" class="scene2-bg2-mountain"
+                    data-anchor-target=".scene2-bg1_5"
+                    data--190p-top="display: none; opacity: 1;"
+                    data--200p-top="display: block; opacity: 1;"
+                    data--210p-top="display: block; opacity: 1;"
+                    data--275p-top="display: none; opacity: 0;">
+
+                <img src="img/mountain-day-00.png" class="scene2-bg2-mountain"
+                    data-anchor-target=".scene2-bg1_5"
+                    data--210p-top="display: block; opacity: 0; top: 0rem;"
+                    data--275p-top="display: block; opacity: 1; top: 0rem;"
+                    data--325p-top="display: block; opacity: 1; top: 35rem;"
+                    data--345p-top="display: block; opacity: 1; top: 35rem;"
+                    data--405p-top="display: none; opacity: 1; top: 95rem;">
+
+                <img src="img/moon.png" class="scene2-bg2-moon"
+                    data-anchor-target=".scene2-bg1_5"
+                    data--215p-top="display: block; opacity: 1; transform: translate(0%, 0%);"
+                    data--265p-top="display: block; opacity: 0; transform: translate(-200%, 50%);">
+
+                <img src="img/sun.png" class="scene3-bg1-sun"
+                    data-anchor-target=".scene2-bg1_5"
+                    data--225p-top="display: block; opacity: 0; transform: translate(200%, 50%);"
+                    data--275p-top="display: block; opacity: 1; transform: translate(0%, 0%;"
+                    data--345p-top="display: block; opacity: 1; transform: translate(0%, 0%;"
+                    data--365p-top="display: none; opacity: 0; transform: translate(0%, -100%;">
 
                 <img src="img/hiker-2.svg" class="scene2-bg2-hiker-2"
                     data-anchor-target=".scene2-bg1_5"
@@ -156,22 +199,79 @@
 
                 <img src="img/hiker-4.svg" class="scene2-bg2-hiker-4"
                     data-anchor-target=".scene2-bg1_5"
-                    data--180p-top="display: block;"
-                    data--190p-top="display: none;">
+                    data--180p-top="display: block; transform: translateX(0%);"
+                    data--190p-top="display: none; transform: translateX(-80%);">
 
                 <img src="img/hiker-3.svg" class="scene2-bg2-hiker-3"
                     data-anchor-target=".scene2-bg1_5"
                     data--170p-top="display: block;"
                     data--180p-top="display: none;">
-            </div>
 
-            <p class="paragraph p-page-5"
+                <p class="paragraph p-page-5"
+                    data-anchor-target=".scene2-bg1_5"
+                    data--100p-top="display: none; opacity: 1;"
+                    data--110p-top="display: block; opacity: 1;"
+                    data--210p-top="display: block; opacity: 1;"
+                    data--220p-top="display: none; opacity: 0;">
+                    and your support <br>
+                    means the world to us.
+                </p>
+
+<!-- Scene3 -->
+                <img src="img/hotAirBalloon.svg" class="scene3-bg1-hotAirBalloon"
+                    data-anchor-target=".scene2-bg1_5"
+                    data--200p-top="display: none; top: 100%;"
+                    data--275p-top="display: block; top: 100%;"
+                    data--325p-top="display: block; top: -205%;"
+                    data--345p-top="display: block; top: -205%;"
+                    data--405p-top="display: none; top: -405%;">
+
+                <p class="paragraph p-page-6"
+                    data-anchor-target=".scene2-bg1_5"
+                    data--295p-top="display: none; opacity: 0;"
+                    data--305p-top="display: block; opacity: 0;"
+                    data--325p-top="display: block; opacity: 1;"
+                    data--345p-top="display: block; opacity: 1;"
+                    data--365p-top="display: none; opacity: 0;">
+                    Let's boldly challenge <br>
+                    the impossibles...
+                </p>
+
+                <img src="img/skydiving.svg" class="scene3-bg1-skydiving"
+                    data-anchor-target=".scene2-bg1_5"
+                    data--365p-top="display: none; opacity: 1; transform: scale(20) rotate(0deg); margin: 0% 0 0 0%;"
+                    data--370p-top="display: block; opacity: 1; transform: scale(20) rotate(0deg); margin: 0% 0 0 0%;"
+                    data--505p-top="display: block; opacity: 1; transform: scale(1) rotate(720deg); margin: 0% 0 0 0%;"
+                    data--545p-top="display: block; opacity: 1; transform: scale(1) rotate(720deg); margin: 0% 0 0 0%;"
+                    data--605p-top="display: none; opacity: 0; transform: scale(0.2) rotate(1080deg); margin: 20% 0 0 -4%;">
+
+                <p class="paragraph p-page-7"
+                    data-anchor-target=".scene2-bg1_5"
+                    data--505p-top="display: block; opacity: 0;"
+                    data--515p-top="display: block; opacity: 1;"
+                    data--545p-top="display: block; opacity: 1;"
+                    data--565p-top="display: none; opacity: 0;">
+                    and share the memories <br>
+                    we create along the way.
+                </p>
+
+                <img src="img/happyNewYear.png" class="scene3-bg1-happyNewYear"
+                    data-anchor-target=".scene2-bg1_5"
+                    data--595p-top="display: block; opacity: 0;"
+                    data--605p-top="display: block; opacity: 1;">
+            </div>
+        </div>
+
+<!-- Scene4 -->
+        <div class="scene4"
+            data-anchor-target=".scene2-bg1_5"
+            data--625p-top="display: flex; opacity: 0;"
+            data--645p-top="display: flex; opacity: 1;">
+
+            <img src="img/ZYXEL-logo.svg" class="scene4-logo"
                 data-anchor-target=".scene2-bg1_5"
-                data--100p-top="display: none;"
-                data--110p-top="display: block;">
-                and your support <br>
-                means the world to us.
-            </p>
+                data--655p-top="opacity: 0;"
+                data--665p-top="opacity: 1;">
         </div>
 
         <div class="scene1-bg2_5"></div>
@@ -179,13 +279,27 @@
         <div class="scene2-bg1_5"></div>
 
         <!-- <div class="scene2-bg2_5"></div> -->
-
     </div>
 
     <footer class="footer">
-        <p class="footer-copyright">© 2019 ZYXEL</p>
-    </footer>
+        <img src="img/components/ZYXEL-copyright.svg" class="footer-copyright"
+            data-anchor-target=".scene2-bg1_5"
+            data-120p-top="display: block;"
+            data-110p-top="display: none;"
+            data--300p-top="display: block;">
 
+        <img src="img/components/ZYXEL-copyright-white.svg" class="footer-copyright"
+            data-anchor-target=".scene2-bg1_5"
+            data-120p-top="display: none;"
+            data-110p-top="display: block;"
+            data--300p-top="display: none;">
+
+        <div class="footer-share">
+            <a href=""><img src="img/components/share-linkedin.svg" class="footer-share-icon"></a>
+            <a href=""><img src="img/components/share-facebook.svg" class="footer-share-icon"></a>
+            <a href=""><img src="img/components/share-twitter.svg" class="footer-share-icon"></a>
+        </div>
+    </footer>
 
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

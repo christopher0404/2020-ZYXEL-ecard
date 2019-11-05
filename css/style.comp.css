@@ -75,6 +75,24 @@ html {
   top: 65%;
   color: #fff; }
 
+.p-page-6 {
+  position: absolute;
+  top: 37%;
+  left: 68vw;
+  color: #000; }
+  @media only screen and (max-width: 52em) {
+    .p-page-6 {
+      display: none !important; } }
+
+.p-page-7 {
+  position: absolute;
+  top: 40%;
+  left: 8vw;
+  color: #000; }
+  @media only screen and (max-width: 52em) {
+    .p-page-7 {
+      display: none !important; } }
+
 .scene1-bg1 {
   position: relative;
   background: url("../img/sky_clouds.png") no-repeat center;
@@ -181,18 +199,20 @@ html {
 .scene2-bg1_5 {
   position: relative;
   background-color: #CBD0D5;
-  height: 600rem;
+  height: 800rem;
   z-index: -1; }
 
 .scene2-bg2 {
-  background: #132528 url("../img/mountain.png") no-repeat center;
+  background: #F9E7D3 no-repeat center;
   background-size: cover;
   width: 192rem;
   position: sticky;
   top: 0;
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  justify-content: center; }
+  .scene2-bg2-mountain {
+    position: absolute;
+    width: 192rem; }
   .scene2-bg2-moon {
     position: absolute;
     top: 10rem;
@@ -204,41 +224,97 @@ html {
         width: 18rem; } }
   .scene2-bg2-hiker-1 {
     position: absolute;
-    top: 57%;
+    top: 64rem;
     left: 33%; }
-    @media only screen and (max-width: 52em) {
-      .scene2-bg2-hiker-1 {
-        left: 20%; } }
     @media only screen and (max-width: 37.5em) {
       .scene2-bg2-hiker-1 {
-        left: 0%; } }
+        left: 7%; } }
   .scene2-bg2-hiker-2 {
     position: absolute;
-    top: 53%;
+    top: 60rem;
     left: 37%; }
-    @media only screen and (max-width: 52em) {
-      .scene2-bg2-hiker-2 {
-        top: 55%;
-        left: 25%; } }
     @media only screen and (max-width: 37.5em) {
       .scene2-bg2-hiker-2 {
-        left: 10%; } }
+        left: 12%; } }
   .scene2-bg2-hiker-3 {
     position: absolute;
-    top: 47%;
+    top: 52rem;
     left: 55%; }
   .scene2-bg2-hiker-4 {
     position: absolute;
-    top: 48%;
+    top: 53rem;
     left: 58.5%; }
+
+.scene3-bg1 {
+  background: #F9E7D3 no-repeat center;
+  background-size: cover;
+  height: 121rem;
+  width: 192rem;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1; }
+  .scene3-bg1-sun {
+    position: absolute;
+    top: 10rem;
+    left: 75vw;
+    width: 20rem;
+    z-index: -2; }
+  .scene3-bg1-hotAirBalloon {
+    position: absolute;
+    top: -205%;
+    width: 192rem;
+    z-index: -1; }
+  @media only screen and (max-width: 52em) {
+    .scene3-bg1-skydiving {
+      width: 40rem; } }
+  .scene3-bg1-happyNewYear {
+    position: absolute;
+    top: 8%;
+    width: 50rem; }
+    @media only screen and (max-width: 52em) {
+      .scene3-bg1-happyNewYear {
+        top: 18%;
+        width: 30rem; } }
+
+.scene4 {
+  background-color: #FF8900;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media only screen and (max-width: 52em) {
+    .scene4-logo {
+      width: 25rem; } }
+
+.header {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 90; }
+  .header-nav {
+    position: absolute;
+    right: 0; }
 
 .footer {
   position: fixed;
   width: 100vw;
-  bottom: 5%;
-  z-index: 90; }
+  bottom: 2%;
+  z-index: 90;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2vw; }
   .footer-copyright {
-    position: absolute;
-    left: 2%;
-    font-size: 2rem;
-    font-weight: bold; }
+    width: 16rem; }
+  .footer-share {
+    display: flex;
+    justify-content: space-evenly; }
+    .footer-share-icon {
+      margin-left: 1.5rem;
+      width: 3rem; }
