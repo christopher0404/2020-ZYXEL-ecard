@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="info">0</div>
+    <!-- <div id="info">0</div> -->
     <div id="progressBar"
          data-start="height: 0%;"
          data-end="height: 100%;">
@@ -21,6 +21,14 @@
         <img src="img/components/nav.svg" class="header-nav">
     </div>
 
+    <div class="noise"
+        data-anchor-target=".scene2-bg1_5"
+        data-start="display: block;"
+        data--490p-top="display: none;">
+
+        <img src="img/components/noise.png">
+    </div>
+
     <div id="skrollr-body">
 
 <!-- Scene1 -->
@@ -28,7 +36,7 @@
             <img src="img/sun.png" alt="sun" class="scene1-sun" 
                 data-anchor-target=".scene1-bg2"
                 data-100p-top="transform: scale(1) translateY(0rem) translateX(0rem);" 
-                data-50p-top="transform: scale(0.28) translateY(250rem) translateX(60rem);">
+                data--100p-top="transform: scale(0.28) translateY(250rem) translateX(60rem);">
             <p class="paragraph p-page-1" 
                 data-anchor-target=".scene1-bg1_5"
                 data-100p-top="transform: translateY(0%);"
@@ -41,44 +49,44 @@
 
         <div class="scene1-bg2"
             data-anchor-target=".scene1-bg2_5"
-            data-75p-bottom="opacity: 1;"
-            data-55p-bottom="opacity: 0;">
+            data-105p-bottom="opacity: 1;"
+            data-100p-bottom="opacity: 0;">
 
             <img src="img/twoMenOnTheBoat-00.svg" class="scene1-boat-00" 
-                data-anchor-target=".scene1-bg2_5"
-                data-400p-bottom="transform: scale(1) translateX(0rem) translateY(0rem); display: block;"
-                data-320p-bottom="transform: scale(1) translateX(0rem) translateY(0rem); display: block;"
-                data-180p-bottom="transform: scale(5) translateX(-22rem) translateY(-10rem); display: none;">
+                data-anchor-target=".scene2-bg1_5"
+                data-550p-top="transform: scale(1) translateX(0rem) translateY(0rem); display: block;"
+                data-450p-top="transform: scale(1) translateX(0rem) translateY(0rem); display: block;"
+                data-400p-top="transform: scale(5) translateX(-22rem) translateY(-10rem); display: none;">
 
-            <img src="img/twoMenOnTheBoat-01.svg" class="scene1-boat-02" 
-                data-anchor-target=".scene1-bg2_5"
-                data-190p-bottom="display: none; transform: translateX(-102rem);"
-                data-180p-bottom="display: block; transform: translateX(-102rem);"
-                data-170p-bottom="display: none; transform: translateX(-102rem);">
+            <img src="img/twoMenOnTheBoat-01.svg" class="scene1-boat-01" 
+                data-anchor-target=".scene2-bg1_5"
+                data-500p-top="display: none; transform: translateX(-102rem);"
+                data-400p-top="display: block; transform: translateX(-102rem);"
+                data-375p-top="display: none; transform: translateX(-102rem);">
 
-            <img src="img/twoMenOnTheBoat-02.svg" class="scene1-boat-02" 
-                data-anchor-target=".scene1-bg2_5"
-                data-180p-bottom="display: none; transform: scale(1) translateX(-102rem); opacity: 1;"
-                data-170p-bottom="display: block; transform: scale(1) translateX(-102rem); opacity: 1;"
-                data-150p-bottom="display: block; transform: scale(1) translateX(-102rem); opacity: 1;"
-                data-75p-bottom="display: block; transform: scale(50) translateX(-102rem); opacity: 1;"
-                data-15p-bottom="display: none; transform: scale(50) translateX(-102rem); opacity: 0;">
+            <img src="img/twoMenOnTheBoat-02.svg" class="scene1-boat-01" 
+                data-anchor-target=".scene2-bg1_5"
+                data-400p-top="display: none; transform: scale(1) translateX(-102rem); opacity: 1;"
+                data-375p-top="display: block; transform: scale(1) translateX(-102rem); opacity: 1;"
+                data-350p-top="display: block; transform: scale(1) translateX(-102rem); opacity: 1;"
+                data-300p-top="display: block; transform: scale(50) translateX(-102rem); opacity: 1;"
+                data-250p-top="display: none; transform: scale(50) translateX(-102rem); opacity: 0;">
 
             <p class="paragraph p-page-2" 
-                data-anchor-target=".scene1-bg1_5"
-                data--25p-bottom="transform: translateX(-1000%);"
-                data--45p-bottom="transform: translateX(0%);"
-                data--100p-bottom="transform: translateX(0%);"
-                data--120p-bottom="transform: translateX(1000%);">
+                data-anchor-target=".scene2-bg1_5"
+                data-550p-top="transform: translateX(-500%); display: block;"
+                data-500p-top="transform: translateX(0%); display: block;"
+                data-450p-top="transform: translateX(0%); display: block;"
+                data-400p-top="transform: translateX(500%); display: none;">
                 We look forward to exploring the world with you
             </p>
 
             <p class="paragraph p-page-3" 
-                data-anchor-target=".scene1-bg2_5"
-                data-200p-bottom="transform: translateX(-1000%);"
-                data-180p-bottom="transform: translateX(0%);"
-                data-150p-bottom="transform: translateX(0%);"
-                data-120p-bottom="transform: translateX(1000%);">
+                data-anchor-target=".scene2-bg1_5"
+                data-425p-top="transform: translateX(-500%); display: block;"
+                data-400p-top="transform: translateX(0%); display: block;"
+                data-350p-top="transform: translateX(0%); display: block;"
+                data-325p-top="transform: translateX(500%); display: none;">
                 ...for endless and magnificent new opportunities
             </p>
         </div>
@@ -92,127 +100,128 @@
 
         <div class="scene2-bg1"
             data-anchor-target=".scene2-bg1_5"
-            data-175p-top="opacity: 0; display: flex;"
-            data-100p-top="opacity: 1; display: flex;"
+            data-300p-top="opacity: 0; display: flex;"
+            data-275p-top="opacity: 1; display: flex;"
             data--750p-top="opacity: 1; display: none;">
 
             <img src="img/moon.png" class="scene2-bg1-moon">
 
             <img src="img/forest-01.png" class="scene2-bg1-forest"
                 data-anchor-target=".scene2-bg1_5"
-                data-bottom-top="transform: translateX(10%) translateY(0%);"
-                data-25p-bottom="transform: translateX(-5%) translateY(2%);">
+                data-275p-top="transform: translateX(10%) translateY(0%);"
+                data-100p-top="transform: translateX(-5%) translateY(2%);">
 
             <img src="img/hill_underbrush.png" class="scene2-bg1-hill">
             <img src="img/eyes.svg" class="scene2-bg1-eyes">
 
             <img src="img/man-right.png" class="scene2-bg1-manRight"
                 data-anchor-target=".scene2-bg1_5"
-                data-100p-top="transform: rotate(0deg)"
-                data-80p-top="transform: rotate(5deg)"
-                data-60p-top="transform: rotate(-5deg)"
-                data-40p-top="transform: rotate(5deg)"
-                data-20p-top="transform: rotate(-5deg)"
-                data-0p-top="transform: rotate(5deg)"
-                data--20p-top="transform: rotate(-5deg)"
-                data--40p-top="transform: rotate(5deg)"
-                data--60p-top="transform: rotate(-5deg)"
-                data--80p-top="transform: rotate(5deg)"
-                data--100p-top="transform: rotate(0deg)">
+                data-275p-top="transform: rotate(0deg)"
+                data-260p-top="transform: rotate(5deg)"
+                data-245p-top="transform: rotate(-5deg)"
+                data-230p-top="transform: rotate(5deg)"
+                data-215p-top="transform: rotate(-5deg)"
+                data-200p-top="transform: rotate(5deg)"
+                data-185p-top="transform: rotate(-5deg)"
+                data-170p-top="transform: rotate(5deg)"
+                data-155p-top="transform: rotate(-5deg)"
+                data-140p-top="transform: rotate(5deg)"
+                data-125p-top="transform: rotate(0deg)">
 
             <img src="img/man-left.png" class="scene2-bg1-manLeft"
                 data-anchor-target=".scene2-bg1_5"
-                data-80p-top="transform: rotate(0deg)"
-                data-60p-top="transform: rotate(5deg)"
-                data-40p-top="transform: rotate(-5deg)"
-                data-20p-top="transform: rotate(5deg)"
-                data-0p-top="transform: rotate(-5deg)"
-                data--20p-top="transform: rotate(5deg)"
-                data--40p-top="transform: rotate(-5deg)"
-                data--60p-top="transform: rotate(5deg)"
-                data--80p-top="transform: rotate(-5deg)"
-                data--100p-top="transform: rotate(0deg)">
+                data-280p-top="transform: rotate(0deg)"
+                data-260p-top="transform: rotate(5deg)"
+                data-240p-top="transform: rotate(-5deg)"
+                data-220p-top="transform: rotate(5deg)"
+                data-200p-top="transform: rotate(-5deg)"
+                data-180p-top="transform: rotate(5deg)"
+                data-160p-top="transform: rotate(-5deg)"
+                data-140p-top="transform: rotate(5deg)"
+                data-120p-top="transform: rotate(-5deg)"
+                data-100p-top="transform: rotate(0deg)">
 
             <p class="paragraph p-page-4"
                 data-anchor-target=".scene2-bg1_5"
-                data-bottom-top="transform[sqrt]: scale(0)"
-                data-top="transform[sqrt]: scale(1)">
+                data-260p-top="transform[sqrt]: scale(0)"
+                data-220p-top="transform[sqrt]: scale(1)">
                 It takes courage to chase your dreams...
             </p>
 
-            <img src="img/forest-03.png" class="scene2-bg1-forest-front"
+            <img src="img/forest-02.png" class="scene2-bg1-forest-front"
                 data-anchor-target=".scene2-bg1_5"
-                data--80p-top="transform: translateX(200%)"
-                data--110p-top="transform: translateX(0%)"
-                data--150p-top="transform: translateX(-200%)">
+                data-200p-top="transform: translateX(200%)"
+                data-100p-top="transform: translateX(0%)"
+                data--100p-top="transform: translateX(-200%)">
 
 <!-- Scene2-bg2 -->
             <div class="scene2-bg2"
                 data-anchor-target=".scene2-bg1_5"
-                data--100p-top="display: none;"
-                data--110p-top="display: flex;"
+                data-100p-top="display: none;"
+                data-90p-top="display: flex;"
                 data--700p-top="display: none;">
 
                 <img src="img/mountain-night-00.png" class="scene2-bg2-mountain"
                     data-anchor-target=".scene2-bg1_5"
-                    data--190p-top="display: block;"
-                    data--200p-top="display: none;">
+                    data-90p-top="display: block;"
+                    data--25p-top="display: none;">
 
                 <img src="img/mountain-night-01.png" class="scene2-bg2-mountain"
                     data-anchor-target=".scene2-bg1_5"
-                    data--190p-top="display: none; opacity: 1;"
-                    data--200p-top="display: block; opacity: 1;"
-                    data--210p-top="display: block; opacity: 1;"
-                    data--275p-top="display: none; opacity: 0;">
+                    data-90p-top="display: none; opacity: 1;"
+                    data--25p-top="display: block; opacity: 1;"
+                    data--45p-top="display: block; opacity: 1;"
+                    data--95p-top="display: none; opacity: 0;">
 
                 <img src="img/mountain-day-00.png" class="scene2-bg2-mountain"
                     data-anchor-target=".scene2-bg1_5"
-                    data--210p-top="display: block; opacity: 0; top: 0rem;"
-                    data--275p-top="display: block; opacity: 1; top: 0rem;"
-                    data--325p-top="display: block; opacity: 1; top: 35rem;"
-                    data--345p-top="display: block; opacity: 1; top: 35rem;"
-                    data--405p-top="display: none; opacity: 1; top: 95rem;">
+                    data--60p-top="display: block; opacity: 0; top: 0rem;"
+                    data--95p-top="display: block; opacity: 1; top: 0rem;"
+                    data--115p-top="display: block; opacity: 1; top: 0rem;"
+                    data--215p-top="display: block; opacity: 1; top: 35rem;"
+                    data--255p-top="display: block; opacity: 1; top: 35rem;"
+                    data--305p-top="display: none; opacity: 1; top: 95rem;">
 
                 <img src="img/moon.png" class="scene2-bg2-moon"
                     data-anchor-target=".scene2-bg1_5"
-                    data--215p-top="display: block; opacity: 1; transform: translate(0%, 0%);"
-                    data--265p-top="display: block; opacity: 0; transform: translate(-200%, 50%);">
+                    data--45p-top="display: block; opacity: 1; transform: translate(0%, 0%);"
+                    data--95p-top="display: block; opacity: 0; transform: translate(-200%, 50%);">
 
                 <img src="img/sun.png" class="scene3-bg1-sun"
                     data-anchor-target=".scene2-bg1_5"
-                    data--225p-top="display: block; opacity: 0; transform: translate(200%, 50%);"
-                    data--275p-top="display: block; opacity: 1; transform: translate(0%, 0%;"
-                    data--345p-top="display: block; opacity: 1; transform: translate(0%, 0%;"
-                    data--365p-top="display: none; opacity: 0; transform: translate(0%, -100%;">
+                    data--45p-top="display: block; opacity: 0; transform: translate(200%, 50%);"
+                    data--95p-top="display: block; opacity: 1; transform: translate(0%, 0%;"
+                    data--255p-top="display: block; opacity: 1; transform: translate(0%, 0%;"
+                    data--275p-top="display: none; opacity: 0; transform: translate(0%, -100%;">
 
                 <img src="img/hiker-2.svg" class="scene2-bg2-hiker-2"
                     data-anchor-target=".scene2-bg1_5"
-                    data--120p-top="transform: translateX(0%) translateY(0%); display: block;"
-                    data--140p-top="transform: translateX(80%) translateY(-35%); display: block;"
-                    data--150p-top="transform: translateX(80%) translateY(-35%); display: none;">
+                    data-35p-top="transform: translateX(0%) translateY(0%); display: block;"
+                    data-10p-top="transform: translateX(80%) translateY(-35%); display: block;"
+                    data-5p-top="transform: translateX(80%) translateY(-35%); display: none;">
 
                 <img src="img/hiker-1.svg" class="scene2-bg2-hiker-1"
                     data-anchor-target=".scene2-bg1_5"
-                    data--120p-top="transform: translateX(0%) translateY(0%); display: block;"
-                    data--160p-top="transform: translateX(180%) translateY(-55%); display: block;"
-                    data--170p-top="transform: translateX(180%) translateY(-55%); display: none;">
+                    data-30p-top="transform: translateX(0%) translateY(0%); display: block;"
+                    data-5p-top="transform: translateX(180%) translateY(-55%); display: block;"
+                    data-0p-top="transform: translateX(180%) translateY(-55%); display: none;">
 
                 <img src="img/hiker-4.svg" class="scene2-bg2-hiker-4"
                     data-anchor-target=".scene2-bg1_5"
-                    data--180p-top="display: block; transform: translateX(0%);"
-                    data--190p-top="display: none; transform: translateX(-80%);">
+                    data--10p-top="display: block; transform: translateX(0%);"
+                    data--20p-top="display: none; transform: translateX(-80%);">
 
                 <img src="img/hiker-3.svg" class="scene2-bg2-hiker-3"
                     data-anchor-target=".scene2-bg1_5"
-                    data--170p-top="display: block;"
-                    data--180p-top="display: none;">
+                    data-0p-top="display: block;"
+                    data--10p-top="display: none;">
 
                 <p class="paragraph p-page-5"
                     data-anchor-target=".scene2-bg1_5"
-                    data--100p-top="display: none; opacity: 1;"
-                    data--110p-top="display: block; opacity: 1;"
-                    data--210p-top="display: block; opacity: 1;"
-                    data--220p-top="display: none; opacity: 0;">
+                    data-90p-top="display: none; opacity: 1;"
+                    data-80p-top="display: block; opacity: 1;"
+                    data--25p-top="display: block; opacity: 1;"
+                    data--45p-top="display: none; opacity: 0;">
                     and your support <br>
                     means the world to us.
                 </p>
@@ -220,58 +229,58 @@
 <!-- Scene3 -->
                 <img src="img/hotAirBalloon.svg" class="scene3-bg1-hotAirBalloon"
                     data-anchor-target=".scene2-bg1_5"
-                    data--200p-top="display: none; top: 100%;"
-                    data--275p-top="display: block; top: 100%;"
-                    data--325p-top="display: block; top: -205%;"
-                    data--345p-top="display: block; top: -205%;"
-                    data--405p-top="display: none; top: -405%;">
+                    data--90p-top="display: none; top: 100%;"
+                    data--115p-top="display: block; top: 100%;"
+                    data--215p-top="display: block; top: -205%;"
+                    data--255p-top="display: block; top: -205%;"
+                    data--305p-top="display: none; top: -405%;">
 
                 <p class="paragraph p-page-6"
                     data-anchor-target=".scene2-bg1_5"
-                    data--295p-top="display: none; opacity: 0;"
-                    data--305p-top="display: block; opacity: 0;"
-                    data--325p-top="display: block; opacity: 1;"
-                    data--345p-top="display: block; opacity: 1;"
-                    data--365p-top="display: none; opacity: 0;">
+                    data--200p-top="display: none; opacity: 0;"
+                    data--205p-top="display: block; opacity: 0;"
+                    data--215p-top="display: block; opacity: 1;"
+                    data--255p-top="display: block; opacity: 1;"
+                    data--275p-top="display: none; opacity: 0;">
                     Let's boldly challenge <br>
                     the impossibles...
                 </p>
 
                 <img src="img/skydiving.svg" class="scene3-bg1-skydiving"
                     data-anchor-target=".scene2-bg1_5"
-                    data--365p-top="display: none; opacity: 1; transform: scale(20) rotate(0deg); margin: 0% 0 0 0%;"
-                    data--370p-top="display: block; opacity: 1; transform: scale(20) rotate(0deg); margin: 0% 0 0 0%;"
-                    data--505p-top="display: block; opacity: 1; transform: scale(1) rotate(720deg); margin: 0% 0 0 0%;"
-                    data--545p-top="display: block; opacity: 1; transform: scale(1) rotate(720deg); margin: 0% 0 0 0%;"
-                    data--605p-top="display: none; opacity: 0; transform: scale(0.2) rotate(1080deg); margin: 20% 0 0 -4%;">
+                    data--260p-top="display: none; opacity: 1; transform: scale(20) rotate(0deg); margin: 0% 0 0 0%;"
+                    data--270p-top="display: block; opacity: 1; transform: scale(20) rotate(0deg); margin: 0% 0 0 0%;"
+                    data--375p-top="display: block; opacity: 1; transform: scale(1) rotate(720deg); margin: 0% 0 0 0%;"
+                    data--380p-top="display: block; opacity: 1; transform: scale(1) rotate(720deg); margin: 0% 0 0 0%;"
+                    data--460p-top="display: none; opacity: 0; transform: scale(0.2) rotate(1080deg); margin: 20% 0 0 -4%;">
 
                 <p class="paragraph p-page-7"
                     data-anchor-target=".scene2-bg1_5"
-                    data--505p-top="display: block; opacity: 0;"
-                    data--515p-top="display: block; opacity: 1;"
-                    data--545p-top="display: block; opacity: 1;"
-                    data--565p-top="display: none; opacity: 0;">
+                    data--355p-top="display: block; opacity: 0;"
+                    data--375p-top="display: block; opacity: 1;"
+                    data--380p-top="display: block; opacity: 1;"
+                    data--440p-top="display: none; opacity: 0;">
                     and share the memories <br>
                     we create along the way.
                 </p>
 
                 <img src="img/happyNewYear.png" class="scene3-bg1-happyNewYear"
                     data-anchor-target=".scene2-bg1_5"
-                    data--595p-top="display: block; opacity: 0;"
-                    data--605p-top="display: block; opacity: 1;">
+                    data--445p-top="display: block; opacity: 0;"
+                    data--460p-top="display: block; opacity: 1;">
             </div>
         </div>
 
 <!-- Scene4 -->
         <div class="scene4"
             data-anchor-target=".scene2-bg1_5"
-            data--625p-top="display: flex; opacity: 0;"
-            data--645p-top="display: flex; opacity: 1;">
+            data--480p-top="display: flex; opacity: 0;"
+            data--500p-top="display: flex; opacity: 1;">
 
             <img src="img/ZYXEL-logo.svg" class="scene4-logo"
                 data-anchor-target=".scene2-bg1_5"
-                data--655p-top="opacity: 0;"
-                data--665p-top="opacity: 1;">
+                data--505p-top="opacity: 0;"
+                data--525p-top="opacity: 1;">
         </div>
 
         <div class="scene1-bg2_5"></div>
@@ -284,20 +293,31 @@
     <footer class="footer">
         <img src="img/components/ZYXEL-copyright.svg" class="footer-copyright"
             data-anchor-target=".scene2-bg1_5"
-            data-120p-top="display: block;"
-            data-110p-top="display: none;"
-            data--300p-top="display: block;">
+            data-300p-top="display: block;"
+            data-285p-top="display: none;"
+            data--195p-top="display: block;">
 
         <img src="img/components/ZYXEL-copyright-white.svg" class="footer-copyright"
             data-anchor-target=".scene2-bg1_5"
-            data-120p-top="display: none;"
-            data-110p-top="display: block;"
-            data--300p-top="display: none;">
+            data-300p-top="display: none;"
+            data-285p-top="display: block;"
+            data--195p-top="display: none;">
 
         <div class="footer-share">
-            <a href=""><img src="img/components/share-linkedin.svg" class="footer-share-icon"></a>
-            <a href=""><img src="img/components/share-facebook.svg" class="footer-share-icon"></a>
-            <a href=""><img src="img/components/share-twitter.svg" class="footer-share-icon"></a>
+            <div class="footer-share-icon">
+                <a href=""><img src="img/components/share-linkedin.svg"></a>
+            </div>
+
+            <div class="footer-share-icon">
+                <a href=""><img src="img/components/share-facebook.svg"></a>
+            </div>
+
+            <div class="footer-share-icon">
+                <a href=""><img src="img/components/share-twitter.svg"></a>
+            </div>
+
+            <!-- <a href=""><img src="img/components/share-facebook.svg" class="footer-share-icon"></a>
+            <a href=""><img src="img/components/share-twitter.svg" class="footer-share-icon"></a> -->
         </div>
     </footer>
 

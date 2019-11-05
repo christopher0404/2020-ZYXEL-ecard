@@ -119,7 +119,7 @@ html {
 
 .scene1-bg2_5 {
   background-color: #418BCE;
-  height: 201rem; }
+  height: 151rem; }
 
 .scene1-sky {
   width: 100vw; }
@@ -139,7 +139,7 @@ html {
   width: 62rem;
   height: 50rem; }
 
-.scene1-boat-02 {
+.scene1-boat-01 {
   position: absolute;
   bottom: -7rem;
   height: 230rem;
@@ -169,7 +169,7 @@ html {
     .scene2-bg1-forest-front {
       position: absolute;
       bottom: 0rem;
-      width: 400rem;
+      width: 700rem;
       z-index: 2; }
   .scene2-bg1-hill {
     position: absolute;
@@ -199,7 +199,7 @@ html {
 .scene2-bg1_5 {
   position: relative;
   background-color: #CBD0D5;
-  height: 800rem;
+  height: 650rem;
   z-index: -1; }
 
 .scene2-bg2 {
@@ -295,7 +295,7 @@ html {
 .header {
   position: fixed;
   width: 100vw;
-  top: 0;
+  top: -2rem;
   z-index: 90; }
   .header-nav {
     position: absolute;
@@ -318,3 +318,9 @@ html {
     .footer-share-icon {
       margin-left: 1.5rem;
       width: 3rem; }
+
+.noise {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50; }
