@@ -7,8 +7,9 @@
 .p-page {
     &-1 {
         position: absolute;
-        top: 50rem;
+        bottom: 10rem;
         margin: 0 auto;
+        text-align: center;
         z-index: 3;
     }
 
@@ -38,6 +39,35 @@
 
         @media only screen and (max-width: $bp-medium) {
             // width: 25.5rem;
+        }
+    }
+
+    &-5 {
+        position: absolute;
+        top: 65%;
+        // width: 50rem;
+        color: #fff;
+    }
+
+    &-6 {
+        position: absolute;
+        top: 37%;
+        left: 68vw;
+        color: #000;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: none !important;
+        }
+    }
+
+    &-7 {
+        position: absolute;
+        top: 40%;
+        left: 8vw;
+        color: #000;
+
+        @media only screen and (max-width: $bp-medium) {
+            display: none !important;
         }
     }
 }

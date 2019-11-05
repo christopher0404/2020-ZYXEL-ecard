@@ -22,11 +22,14 @@
     
         &-forest {
             position: absolute;
-            top: -35rem;
+            top: -60rem;
+            width: 232rem;
     
             &-front {
                 position: absolute;
-                bottom: -85rem;
+                bottom: 0rem;
+                width: 700rem;
+                z-index: 2;
             }
         }
     
@@ -64,10 +67,82 @@
             }
         }
     }
-
     &-bg1_5 {
-        // position: relative;
+        position: relative;
         background-color: #CBD0D5;
-        height: 300rem;
+        height: 650rem;
+        z-index: -1;
     }
+
+    &-bg2 {
+        background: #F9E7D3 no-repeat center;
+        background-size: cover;
+        // height: 321rem;
+        width: 192rem;
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: center;
+
+        &-mountain {
+            position: absolute;
+            width: 192rem;
+            // bottom: -45rem;
+        }
+
+        &-moon {
+            position: absolute;
+            top: 10rem;
+            left: 10%;
+            width: 21rem;
+    
+            @media only screen and (max-width: $bp-medium) {
+                left: 5%;
+                width: 18rem;
+            }
+        }
+
+        &-hiker {
+            &-1 {
+                position: absolute;
+                top: 64rem;
+                left: 33%;
+    
+                @media only screen and (max-width: $bp-small) {
+                    left: 7%;
+                }
+            }
+
+            &-2 {
+                position: absolute;
+                top: 60rem;
+                left: 37%;
+    
+                @media only screen and (max-width: $bp-small) {
+                    left: 12%;
+                }
+            }
+
+            &-3 {
+                position: absolute;
+                top: 52rem;
+                left: 55%;
+            }
+
+            &-4 {
+                position: absolute;
+                top: 53rem;
+                left: 58.5%;
+            }
+        }
+    }
+
+    
+
+    // &-bg2_5 {
+    //     background: #666 no-repeat center;
+    //     background-size: cover;
+    //     height: 101rem;
+    //     position: relative;
+    // }
 }

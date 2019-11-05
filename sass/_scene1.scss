@@ -1,33 +1,36 @@
-.scene-1 {
-    &-bg-1 {
-    position: relative;
-    background: url("../img/sky_clouds.png") no-repeat center;
-    background-size: cover;
-    height: 81rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* z-index: 2; */
+.scene1 {
+    &-bg1 {
+        position: relative;
+        background: url("../img/sky_clouds.png") no-repeat center;
+        background-size: cover;
+        height: 81rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* z-index: 2; */
     }
-    &-bg-1_5 {
+
+    &-bg1_5 {
         position: relative;
         background-color: #ADE6E6;
         height: 20rem;
     }
-    &-bg-2 {
+
+    &-bg2 {
         background: #ADE6E6 url("../img/ocean_clouds.png") no-repeat center;
         background-size: cover;
         height: 101rem;
         position: sticky;
         top: 0;
-        overflow: hidden;
+        // overflow: hidden;
         display: flex;
         justify-content: center;
         // z-index: 1;
     }
-    &-bg-2_5 {
+
+    &-bg2_5 {
         background-color: #418BCE;
-        height: 161rem;
+        height: 151rem;
     }
 
     &-sky {
@@ -46,9 +49,20 @@
     }
 
     &-boat {
-        position: absolute;
-        top: 20rem;
-        width: 62rem;
-        height: 50rem;
+        &-00 {
+            position: absolute;
+            top: 20rem;
+            width: 62rem;
+            height: 50rem;
+        }
+
+        &-01 {
+            position: absolute;
+            // right: 22vw;
+            bottom: -7rem;
+            height: 230rem;
+            transform-origin: 51.18% 72.3%;
+            // transform-origin: 86.28% 72.3%;
+        }
     }
 }

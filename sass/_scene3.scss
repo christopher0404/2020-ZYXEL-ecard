@@ -1,0 +1,66 @@
+.scene3 {
+    &-bg1 {
+        background: #F9E7D3 no-repeat center;
+        background-size: cover;
+        height: 121rem;
+        width: 192rem;
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+
+        &-sun {
+            position: absolute;
+            top: 10rem;
+            left: 75vw;
+            width: 20rem;
+            z-index: -2;
+        }
+        
+        &-hotAirBalloon {
+            position: absolute;
+            top: -205%;
+            width: 192rem;
+            z-index: -1;
+        }
+
+        &-skydiving {
+            // margin-top: 10%;
+            // margin-left: -3%;
+    
+            @media only screen and (max-width: $bp-medium) {
+                width: 40rem;
+            }
+        }
+
+        &-happyNewYear {
+            position: absolute;
+            top: 8%;
+            width: 50rem;
+    
+            @media only screen and (max-width: $bp-medium) {
+                top: 18%;
+                width: 30rem;
+            }
+        }
+    }
+}
+.scene4 {
+    background-color: #FF8900;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-logo {
+    
+        @media only screen and (max-width: $bp-medium) {
+            width: 25rem;
+        }
+    }
+}

@@ -1,13 +1,32 @@
 .footer {
     position: fixed;
     width: 100vw;
-    bottom: 5%;
+    bottom: 2%;
     z-index: 90;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
 
     &-copyright {
-        position: absolute;
-        left: 2%;
-        font-size: 2rem;
-        font-weight: bold;
+        // position: absolute;
+        // left: 2%;
+        width: 16rem;
     }
+
+    &-share {
+        display: flex;
+        justify-content: space-evenly;
+
+        &-icon {
+            margin-left: 1.5rem;
+            width: 3rem;
+        }
+    }
+}
+.noise {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
 }
