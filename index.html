@@ -18,7 +18,21 @@
     </div>
     
     <div class="header">
-        <img src="img/components/nav.svg" class="header-nav">
+        <!-- <img src="img/components/nav.svg" class="header-nav"> -->
+        <div class="nav-line"></div>
+        <div class="nav">
+            <a href="#page01" class="nav-dot"></a>
+            <a href="#page02" class="nav-dot"></a>
+            <a href="#page03" class="nav-dot"></a>
+            <a href="#page04" class="nav-dot"></a>
+            <a href="#page05" class="nav-dot"></a>
+        </div>
+        <div class="sound">
+            <audio id="audio" 
+                src="audio/22882619_new-year_by_vxz_preview.mp3"></audio>
+            <img src="img/components/sound.svg" class="sound-on" onclick="pauseAudio()">
+            <img src="img/components/mute.svg" class="sound-off" onclick="playAudio()">
+        </div>
     </div>
 
     <div class="noise"
@@ -30,9 +44,8 @@
     </div>
 
     <div id="skrollr-body">
-
-<!-- Scene1 -->
-        <div class="scene1-bg1">
+<!-- Scene1 The Ocean -->
+        <div id="page01" class="scene1-bg1">
             <img src="img/sun.png" alt="sun" class="scene1-sun" 
                 data-anchor-target=".scene1-bg2"
                 data-100p-top="transform: scale(1) translateY(0rem) translateX(0rem);" 
@@ -91,13 +104,7 @@
             </p>
         </div>
 
-<!-- Scene2 -->
-        <!-- <div class="scene2-bg1"
-            data-anchor-target=".scene1-bg2_5"
-            data-75p-bottom="opacity: 0; display: flex;"
-            data-15p-bottom="opacity: 1; display: flex;"
-            data-end="opacity: 1; display: none;"> -->
-
+<!-- Scene2 Hiking -->
         <div class="scene2-bg1"
             data-anchor-target=".scene2-bg1_5"
             data-300p-top="opacity: 0; display: flex;"
@@ -154,7 +161,7 @@
                 data-100p-top="transform: translateX(0%)"
                 data--100p-top="transform: translateX(-200%)">
 
-<!-- Scene2-bg2 -->
+<!-- Scene2-bg2 Mountain Top -->
             <div class="scene2-bg2"
                 data-anchor-target=".scene2-bg1_5"
                 data-100p-top="display: none;"
@@ -226,7 +233,7 @@
                     means the world to us.
                 </p>
 
-<!-- Scene3 -->
+<!-- Scene3 Hot Air Balloon -->
                 <img src="img/hotAirBalloon.svg" class="scene3-bg1-hotAirBalloon"
                     data-anchor-target=".scene2-bg1_5"
                     data--90p-top="display: none; top: 100%;"
@@ -264,6 +271,7 @@
                     we create along the way.
                 </p>
 
+<!-- Scene3 Happy New Year -->
                 <img src="img/happyNewYear.png" class="scene3-bg1-happyNewYear"
                     data-anchor-target=".scene2-bg1_5"
                     data--445p-top="display: block; opacity: 0;"
@@ -271,24 +279,26 @@
             </div>
         </div>
 
-<!-- Scene4 -->
+<!-- Scene4 The End -->
         <div class="scene4"
             data-anchor-target=".scene2-bg1_5"
             data--480p-top="display: flex; opacity: 0;"
             data--500p-top="display: flex; opacity: 1;">
 
-            <img src="img/ZYXEL-logo.svg" class="scene4-logo"
+            <img id="page04" src="img/ZYXEL-logo.svg" class="scene4-logo"
                 data-anchor-target=".scene2-bg1_5"
                 data--505p-top="opacity: 0;"
                 data--525p-top="opacity: 1;">
         </div>
 
-        <div class="scene1-bg2_5"></div>
+        <div id="page02" class="scene1-bg2_5"></div>
 
-        <div class="scene2-bg1_5"></div>
+        <div id="page03" class="scene2-bg1_5"></div>
 
-        <!-- <div class="scene2-bg2_5"></div> -->
+        <div id="page05"></div>
     </div>
+
+    <div class="snow-world"></div>
 
     <footer class="footer">
         <img src="img/components/ZYXEL-copyright.svg" class="footer-copyright"
@@ -296,7 +306,7 @@
             data-300p-top="display: block;"
             data-285p-top="display: none;"
             data--195p-top="display: block;">
-
+            
         <img src="img/components/ZYXEL-copyright-white.svg" class="footer-copyright"
             data-anchor-target=".scene2-bg1_5"
             data-300p-top="display: none;"
@@ -305,25 +315,23 @@
 
         <div class="footer-share">
             <div class="footer-share-icon">
-                <a href=""><img src="img/components/share-linkedin.svg"></a>
+                <a href="" onclick="lds_click()"><img src="img/components/share-linkedin.svg"></a>
             </div>
 
             <div class="footer-share-icon">
-                <a href=""><img src="img/components/share-facebook.svg"></a>
+                <a href="" data-js="facebook-share"><img src="img/components/share-facebook.svg"></a>
             </div>
 
             <div class="footer-share-icon">
-                <a href=""><img src="img/components/share-twitter.svg"></a>
+                <a href="" onclick="tws_click()"><img src="img/components/share-twitter.svg"></a>
             </div>
-
-            <!-- <a href=""><img src="img/components/share-facebook.svg" class="footer-share-icon"></a>
-            <a href=""><img src="img/components/share-twitter.svg" class="footer-share-icon"></a> -->
         </div>
     </footer>
 
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/skrollr.min.js"></script>
+    <script src="js/yoshi.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

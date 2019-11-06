@@ -38,10 +38,44 @@ html {
   width: 1rem;
   z-index: 999; }
 
+.noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50; }
+
+/* # Snow Effect
+================================================== */
+.snow-world {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  pointer-events: none; }
+
+.snow-world .Yoshi_particleEffects {
+  width: 100%;
+  height: 100%; }
+
+@font-face {
+  font-family: "Galano Grotesque DEMO";
+  src: url("/fonts/Rene Bieder - Galano Grotesque DEMO Bold.otf") format("otf"); }
+
 .paragraph {
   font-size: 5rem;
   font-weight: bold;
   color: #000; }
+  @media only screen and (max-width: 37.5em) {
+    .paragraph {
+      font-size: 3rem; } }
 
 .p-page-1 {
   position: absolute;
@@ -100,8 +134,7 @@ html {
   height: 81rem;
   display: flex;
   justify-content: center;
-  align-items: center;
-  /* z-index: 2; */ }
+  align-items: center; }
 
 .scene1-bg1_5 {
   position: relative;
@@ -114,6 +147,7 @@ html {
   height: 101rem;
   position: sticky;
   top: 0;
+  overflow: hidden;
   display: flex;
   justify-content: center; }
 
@@ -295,11 +329,45 @@ html {
 .header {
   position: fixed;
   width: 100vw;
-  top: -2rem;
+  top: 3rem;
   z-index: 90; }
-  .header-nav {
+
+.nav {
+  display: flex;
+  position: absolute;
+  right: 10rem; }
+  .nav-line {
     position: absolute;
-    right: 0; }
+    right: 10rem;
+    top: .8rem;
+    height: 1px;
+    width: 23rem;
+    background-color: #000; }
+  .nav-dot {
+    height: 1.8rem;
+    width: 1.8rem;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 0.3rem solid #000;
+    margin-left: 3.5rem;
+    cursor: pointer;
+    transition: .5s; }
+    .nav-dot:hover {
+      transform: scale(1.5); }
+
+.sound {
+  position: absolute;
+  top: -1.7rem;
+  right: 4rem;
+  width: 3rem;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: .6s; }
+  .sound:hover {
+    opacity: 1; }
+  .sound-off {
+    position: absolute;
+    top: 1rem; }
 
 .footer {
   position: fixed;
@@ -310,17 +378,32 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 0 2vw; }
+  @media only screen and (max-width: 37.5em) {
+    .footer {
+      align-items: flex-end; } }
   .footer-copyright {
-    width: 16rem; }
+    width: 16rem;
+    opacity: 0.5;
+    transition: .6s; }
+    .footer-copyright:hover {
+      opacity: 1; }
+    @media only screen and (max-width: 37.5em) {
+      .footer-copyright {
+        width: 10rem; } }
   .footer-share {
     display: flex;
     justify-content: space-evenly; }
+    @media only screen and (max-width: 37.5em) {
+      .footer-share {
+        flex-direction: column; } }
     .footer-share-icon {
       margin-left: 1.5rem;
-      width: 3rem; }
-
-.noise {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 50; }
+      width: 3rem;
+      cursor: pointer;
+      opacity: 0.5;
+      transition: .6s; }
+      .footer-share-icon:hover {
+        opacity: 1; }
+      @media only screen and (max-width: 37.5em) {
+        .footer-share-icon {
+          margin-top: 1.5rem; } }

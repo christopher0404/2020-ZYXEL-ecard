@@ -1,0 +1,11 @@
+<svg width="48" height="29" viewBox="0 0 48 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="26" width="4.8" height="3" rx="1.5" fill="black"/>
+<rect x="7.20001" y="26" width="4.8" height="3" rx="1.5" fill="black"/>
+<rect x="14.4" y="26" width="4.8" height="3" rx="1.5" fill="black"/>
+<rect x="21.6" y="26" width="4.8" height="3" rx="1.5" fill="black"/>
+<rect x="28.8" y="26" width="4.8" height="3" rx="1.5" fill="black"/>
+<rect x="36" y="26" width="4.8" height="3" rx="1.5" fill="black"/>
+<rect x="43.2" y="26" width="4.8" height="3" rx="1.5" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M29.8477 18.2089C29.543 18.5137 29.0489 18.5137 28.7442 18.2089L17.7087 7.17339C17.4039 6.86866 17.4039 6.37458 17.7087 6.06984C18.0134 5.76511 18.5075 5.76511 18.8122 6.06984L29.8477 17.1054C30.1525 17.4101 30.1525 17.9042 29.8477 18.2089Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M29.8478 6.06993C30.1526 6.37466 30.1526 6.86874 29.8478 7.17348L18.8123 18.209C18.5076 18.5137 18.0135 18.5137 17.7088 18.209C17.404 17.9043 17.404 17.4102 17.7088 17.1055L28.7443 6.06993C29.049 5.76519 29.5431 5.76519 29.8478 6.06993Z" fill="black"/>
+</svg>
