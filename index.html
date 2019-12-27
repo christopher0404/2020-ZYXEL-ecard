@@ -2,39 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>2020-ZYXEL-ecard</title>
+    
+    <title>Zyxel Season's Greetings 2020</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.prefix.css">
+    <!-- <link rel="stylesheet" href="css/style.comp.css"> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 
 <body>
     <!-- <div id="info">0</div> -->
-    <div id="progressBar"
-         data-start="height: 0%;"
-         data-end="height: 100%;">
+    
+    <div class="overlay">
+        <img src="img/components/rotatePhone.svg" id="rotateDevice">
     </div>
     
     <div class="header">
-        <!-- <img src="img/components/nav.svg" class="header-nav"> -->
-        <div class="nav-line"></div>
-        <div class="nav">
-            <a href="#page01" class="nav-dot"></a>
-            <a href="#page02" class="nav-dot"></a>
-            <a href="#page03" class="nav-dot"></a>
-            <a href="#page04" class="nav-dot"></a>
-            <a href="#page05" class="nav-dot"></a>
+        <div id="progressBar"
+             data-start="width: 0%;"
+             data-end="width: 100%;">
         </div>
+
+        <div class="fullscreen">
+            <img src="img/components/fullscreen.svg" 
+                 title="Full Screen"
+                 onclick="toggleFullScreen()">
+        </div>
+
+        <div class="reminder">
+            <p class="reminder-message">
+                Click to enjoy<br>
+                the best viewing
+            </p>
+            <div class="reminder-close">&times;</div>
+        </div>
+        
         <div class="sound">
             <audio id="audio" 
-                src="audio/22882619_new-year_by_vxz_preview.mp3"></audio>
-            <img src="img/components/sound.svg" class="sound-on" onclick="pauseAudio()">
-            <img src="img/components/mute.svg" class="sound-off" onclick="playAudio()">
+                src="media/audio/newYear.mp3">
+            </audio>
+            <img src="img/components/sound-off.svg" 
+                class="sound-off" 
+                onclick="playAudio()">
+            <img src="img/components/sound-on.svg" 
+                class="sound-on" 
+                onclick="pauseAudio()">
         </div>
     </div>
 
+    <div class="scroll-reminder">
+        <div class="scroll"
+            data-anchor-target=".scene1-bg1_5"
+            data-90p-top="opacity: 1;"
+            data-35p-top="opacity: 0;">
+            <div class="scroll-icon"></div>
+            <p>Scroll</p>
+        </div>
+    </div>
+    
     <div class="noise"
         data-anchor-target=".scene2-bg1_5"
         data-start="display: block;"
@@ -43,41 +70,56 @@
         <img src="img/components/noise.png">
     </div>
 
+<!-- skrollr-body -->
     <div id="skrollr-body">
 <!-- Scene1 The Ocean -->
         <div id="page01" class="scene1-bg1">
-            <img src="img/sun.png" alt="sun" class="scene1-sun" 
-                data-anchor-target=".scene1-bg2"
-                data-100p-top="transform: scale(1) translateY(0rem) translateX(0rem);" 
-                data--100p-top="transform: scale(0.28) translateY(250rem) translateX(60rem);">
+            <img src="img/objects/clouds-01.svg" class="scene1-clouds">
+
+            <img src="img/objects/sun.png" class="scene1-sun-01" 
+                data-anchor-target=".scene1-bg1_5"
+                data-80p-top="opacity: 1; transform: translateY(0%);"
+                data-70p-top="opacity: 0; transform: translateY(50%);"> 
+            
             <p class="paragraph p-page-1" 
                 data-anchor-target=".scene1-bg1_5"
-                data-100p-top="transform: translateY(0%);"
-                data-center-bottom="transform: translateY(-1000%);">
-                It's the beginning of a brand new year
+                data-90p-top="transform: translateY(0%); opacity: 1;"
+                data-60p-top="transform: translateY(-300%); opacity: 0;">
+                It's the beginning of a brand new year.
             </p>
         </div>
 
         <div class="scene1-bg1_5"></div>
 
         <div class="scene1-bg2"
-            data-anchor-target=".scene1-bg2_5"
-            data-105p-bottom="opacity: 1;"
-            data-100p-bottom="opacity: 0;">
+            data-anchor-target=".scene2-bg1_5"
+            data-525p-top="opacity: 1;"
+            data-290p-top="opacity: 1;"
+            data-285p-top="opacity: 0;">
 
-            <img src="img/twoMenOnTheBoat-00.svg" class="scene1-boat-00" 
+            <div class="scene1-bg2-sky"></div>
+
+            <img src="img/objects/clouds-02.svg" class="scene1-clouds">
+
+            <div class="scene1-bg2-ocean">
+                <img src="img/objects/ocean_waves.svg" class="scene1-bg2-ocean-waves">
+            </div>
+
+            <img src="img/objects/sun.png" class="scene1-sun-02"> 
+
+            <img src="img/objects/twoMenOnTheBoat-00.svg" class="scene1-boat-00" 
                 data-anchor-target=".scene2-bg1_5"
                 data-550p-top="transform: scale(1) translateX(0rem) translateY(0rem); display: block;"
                 data-450p-top="transform: scale(1) translateX(0rem) translateY(0rem); display: block;"
                 data-400p-top="transform: scale(5) translateX(-22rem) translateY(-10rem); display: none;">
 
-            <img src="img/twoMenOnTheBoat-01.svg" class="scene1-boat-01" 
+            <img src="img/objects/twoMenOnTheBoat-01.svg" class="scene1-boat-01" 
                 data-anchor-target=".scene2-bg1_5"
                 data-500p-top="display: none; transform: translateX(-102rem);"
                 data-400p-top="display: block; transform: translateX(-102rem);"
                 data-375p-top="display: none; transform: translateX(-102rem);">
 
-            <img src="img/twoMenOnTheBoat-02.svg" class="scene1-boat-01" 
+            <img src="img/objects/twoMenOnTheBoat-02.svg" class="scene1-boat-01" 
                 data-anchor-target=".scene2-bg1_5"
                 data-400p-top="display: none; transform: scale(1) translateX(-102rem); opacity: 1;"
                 data-375p-top="display: block; transform: scale(1) translateX(-102rem); opacity: 1;"
@@ -87,20 +129,20 @@
 
             <p class="paragraph p-page-2" 
                 data-anchor-target=".scene2-bg1_5"
-                data-550p-top="transform: translateX(-500%); display: block;"
-                data-500p-top="transform: translateX(0%); display: block;"
-                data-450p-top="transform: translateX(0%); display: block;"
-                data-400p-top="transform: translateX(500%); display: none;">
+                data-580p-top="opacity: 0;"
+                data-540p-top="opacity: 1;"
+                data-480p-top="opacity: 1;"
+                data-450p-top="opacity: 0;">
                 We look forward to exploring the world with you
             </p>
 
             <p class="paragraph p-page-3" 
                 data-anchor-target=".scene2-bg1_5"
-                data-425p-top="transform: translateX(-500%); display: block;"
-                data-400p-top="transform: translateX(0%); display: block;"
-                data-350p-top="transform: translateX(0%); display: block;"
-                data-325p-top="transform: translateX(500%); display: none;">
-                ...for endless and magnificent new opportunities
+                data-425p-top="opacity: 0;"
+                data-400p-top="opacity: 1;"
+                data-350p-top="opacity: 1;"
+                data-325p-top="opacity: 0;">
+                ...for endless and magnificent new opportunities.
             </p>
         </div>
 
@@ -111,51 +153,40 @@
             data-275p-top="opacity: 1; display: flex;"
             data--750p-top="opacity: 1; display: none;">
 
-            <img src="img/moon.png" class="scene2-bg1-moon">
+            <img src="img/objects/moon.png" class="scene2-bg1-moon">
 
-            <img src="img/forest-01.png" class="scene2-bg1-forest"
+            <img src="img/objects/forest-01.png" class="scene2-bg1-forest"
                 data-anchor-target=".scene2-bg1_5"
                 data-275p-top="transform: translateX(10%) translateY(0%);"
                 data-100p-top="transform: translateX(-5%) translateY(2%);">
 
-            <img src="img/hill_underbrush.png" class="scene2-bg1-hill">
-            <img src="img/eyes.svg" class="scene2-bg1-eyes">
+            <img src="img/objects/hill_underbrush.png" class="scene2-bg1-hill">
+            <img src="img/objects/eyes.svg" class="scene2-bg1-eyes">
 
-            <img src="img/man-right.png" class="scene2-bg1-manRight"
+            <img src="img/objects/man-right.png" class="scene2-bg1-manRight"
                 data-anchor-target=".scene2-bg1_5"
-                data-275p-top="transform: rotate(0deg)"
-                data-260p-top="transform: rotate(5deg)"
-                data-245p-top="transform: rotate(-5deg)"
-                data-230p-top="transform: rotate(5deg)"
-                data-215p-top="transform: rotate(-5deg)"
-                data-200p-top="transform: rotate(5deg)"
-                data-185p-top="transform: rotate(-5deg)"
-                data-170p-top="transform: rotate(5deg)"
-                data-155p-top="transform: rotate(-5deg)"
-                data-140p-top="transform: rotate(5deg)"
-                data-125p-top="transform: rotate(0deg)">
+                data-270p-top="transform: rotate(0deg)"
+                data-250p-top="transform: rotate(-2deg)"
+                data-230p-top="transform: rotate(2deg)"
+                data-210p-top="transform: rotate(0deg)">
 
-            <img src="img/man-left.png" class="scene2-bg1-manLeft"
+            <img src="img/objects/man-left.png" class="scene2-bg1-manLeft"
                 data-anchor-target=".scene2-bg1_5"
-                data-280p-top="transform: rotate(0deg)"
-                data-260p-top="transform: rotate(5deg)"
-                data-240p-top="transform: rotate(-5deg)"
-                data-220p-top="transform: rotate(5deg)"
-                data-200p-top="transform: rotate(-5deg)"
-                data-180p-top="transform: rotate(5deg)"
-                data-160p-top="transform: rotate(-5deg)"
-                data-140p-top="transform: rotate(5deg)"
-                data-120p-top="transform: rotate(-5deg)"
-                data-100p-top="transform: rotate(0deg)">
+                data-260p-top="transform: rotate(0deg)"
+                data-240p-top="transform: rotate(-2deg)"
+                data-220p-top="transform: rotate(2deg)"
+                data-200p-top="transform: rotate(0deg)">
 
             <p class="paragraph p-page-4"
                 data-anchor-target=".scene2-bg1_5"
-                data-260p-top="transform[sqrt]: scale(0)"
-                data-220p-top="transform[sqrt]: scale(1)">
+                data-260p-top="opacity: 0;"
+                data-220p-top="opacity: 1;"
+                data-100p-top="opacity: 1;"
+                data-90p-top="opacity: 0;">
                 It takes courage to chase your dreams...
             </p>
 
-            <img src="img/forest-02.png" class="scene2-bg1-forest-front"
+            <img src="img/objects/forest-02.png" class="scene2-bg1-forest-front"
                 data-anchor-target=".scene2-bg1_5"
                 data-200p-top="transform: translateX(200%)"
                 data-100p-top="transform: translateX(0%)"
@@ -168,73 +199,91 @@
                 data-90p-top="display: flex;"
                 data--700p-top="display: none;">
 
-                <img src="img/mountain-night-00.png" class="scene2-bg2-mountain"
+                <img src="img/objects/mountain-night-00.png" class="scene2-bg2-mountain"
                     data-anchor-target=".scene2-bg1_5"
                     data-90p-top="display: block;"
                     data--25p-top="display: none;">
 
-                <img src="img/mountain-night-01.png" class="scene2-bg2-mountain"
+                <img src="img/objects/mountain-night-01.png" class="scene2-bg2-mountain"
                     data-anchor-target=".scene2-bg1_5"
                     data-90p-top="display: none; opacity: 1;"
                     data--25p-top="display: block; opacity: 1;"
                     data--45p-top="display: block; opacity: 1;"
                     data--95p-top="display: none; opacity: 0;">
 
-                <img src="img/mountain-day-00.png" class="scene2-bg2-mountain"
+                <img src="img/objects/mountain-day-00.png" class="scene2-bg2-mountain"
                     data-anchor-target=".scene2-bg1_5"
                     data--60p-top="display: block; opacity: 0; top: 0rem;"
                     data--95p-top="display: block; opacity: 1; top: 0rem;"
                     data--115p-top="display: block; opacity: 1; top: 0rem;"
-                    data--215p-top="display: block; opacity: 1; top: 35rem;"
-                    data--255p-top="display: block; opacity: 1; top: 35rem;"
-                    data--305p-top="display: none; opacity: 1; top: 95rem;">
+                    data--255p-top="display: none; opacity: 1; top: 65rem;">
 
-                <img src="img/moon.png" class="scene2-bg2-moon"
+                <img src="img/objects/shiningStars.svg" class="scene2-bg2-stars"
+                    data-anchor-target=".scene2-bg1_5"
+                    data-90p-top="display: block; opacity: 1;"
+                    data--45p-top="display: block; opacity: 1;"
+                    data--65p-top="display: none; opacity: 0;">
+
+                <img src="img/objects/moon.png" class="scene2-bg2-moon"
                     data-anchor-target=".scene2-bg1_5"
                     data--45p-top="display: block; opacity: 1; transform: translate(0%, 0%);"
                     data--95p-top="display: block; opacity: 0; transform: translate(-200%, 50%);">
 
-                <img src="img/sun.png" class="scene3-bg1-sun"
+                <img src="img/objects/sun.png" class="scene3-bg1-sun"
                     data-anchor-target=".scene2-bg1_5"
                     data--45p-top="display: block; opacity: 0; transform: translate(200%, 50%);"
                     data--95p-top="display: block; opacity: 1; transform: translate(0%, 0%;"
                     data--255p-top="display: block; opacity: 1; transform: translate(0%, 0%;"
                     data--275p-top="display: none; opacity: 0; transform: translate(0%, -100%;">
 
-                <img src="img/hiker-2.svg" class="scene2-bg2-hiker-2"
+                <img src="img/objects/hiker-2.svg" class="scene2-bg2-hiker-2"
                     data-anchor-target=".scene2-bg1_5"
-                    data-35p-top="transform: translateX(0%) translateY(0%); display: block;"
-                    data-10p-top="transform: translateX(80%) translateY(-35%); display: block;"
-                    data-5p-top="transform: translateX(80%) translateY(-35%); display: none;">
+                    data-35p-top="transform: translateX(0%) translateY(0%); opacity: 1;"
+                    data-10p-top="transform: translateX(110%) translateY(-45%); opacity: 1;"
+                    data--40p-top="transform: translateX(110%) translateY(-45%); opacity: 1;"
+                    data--70p-top="transform: translateX(110%) translateY(-45%); opacity: 0;">
 
-                <img src="img/hiker-1.svg" class="scene2-bg2-hiker-1"
+                <img src="img/objects/hiker-1.svg" class="scene2-bg2-hiker-1"
                     data-anchor-target=".scene2-bg1_5"
-                    data-30p-top="transform: translateX(0%) translateY(0%); display: block;"
-                    data-5p-top="transform: translateX(180%) translateY(-55%); display: block;"
-                    data-0p-top="transform: translateX(180%) translateY(-55%); display: none;">
+                    data-30p-top="transform: translateX(0%) translateY(0%); opacity: 1;"
+                    data-5p-top="transform: translateX(180%) translateY(-70%); opacity: 1;"
+                    data--40p-top="transform: translateX(180%) translateY(-70%); opacity: 1;"
+                    data--70p-top="transform: translateX(180%) translateY(-70%); opacity: 0;">
 
-                <img src="img/hiker-4.svg" class="scene2-bg2-hiker-4"
+                <img src="img/objects/hiker-4.svg" class="scene2-bg2-hiker-4"
                     data-anchor-target=".scene2-bg1_5"
-                    data--10p-top="display: block; transform: translateX(0%);"
-                    data--20p-top="display: none; transform: translateX(-80%);">
+                    data--40p-top="opacity: 1;"
+                    data--70p-top="opacity: 0;">
 
-                <img src="img/hiker-3.svg" class="scene2-bg2-hiker-3"
+                <img src="img/objects/hiker-3.svg" class="scene2-bg2-hiker-3"
                     data-anchor-target=".scene2-bg1_5"
-                    data-0p-top="display: block;"
-                    data--10p-top="display: none;">
+                    data--40p-top="opacity: 1;"
+                    data--70p-top="opacity: 0;">
 
                 <p class="paragraph p-page-5"
                     data-anchor-target=".scene2-bg1_5"
                     data-90p-top="display: none; opacity: 1;"
                     data-80p-top="display: block; opacity: 1;"
-                    data--25p-top="display: block; opacity: 1;"
-                    data--45p-top="display: none; opacity: 0;">
-                    and your support <br>
+                    data--40p-top="display: block; opacity: 1;"
+                    data--80p-top="display: none; opacity: 0;">
+                    and your 
+                    <span data-anchor-target=".scene2-bg1_5"
+                        data--24p-top="color: !inherit;"
+                        data--25p-top="color: !#FF8900;">
+                        support
+                    </span><br>
                     means the world to us.
                 </p>
 
 <!-- Scene3 Hot Air Balloon -->
-                <img src="img/hotAirBalloon.svg" class="scene3-bg1-hotAirBalloon"
+                <img src="img/objects/clouds-01.svg" class="scene3-bg1-clouds"
+                    data-anchor-target=".scene2-bg1_5"
+                    data--355p-top="display: block; opacity: 1;"
+                    data--375p-top="display: block; opacity: 1;"
+                    data--420p-top="display: none; opacity: 0;">
+
+                <img src="img/objects/hotAirBalloon.svg" 
+                    class="scene3-bg1-hotAirBalloon"
                     data-anchor-target=".scene2-bg1_5"
                     data--90p-top="display: none; top: 100%;"
                     data--115p-top="display: block; top: 100%;"
@@ -253,7 +302,7 @@
                     the impossibles...
                 </p>
 
-                <img src="img/skydiving.svg" class="scene3-bg1-skydiving"
+                <img src="img/objects/skydiving.svg" class="scene3-bg1-skydiving"
                     data-anchor-target=".scene2-bg1_5"
                     data--260p-top="display: none; opacity: 1; transform: scale(20) rotate(0deg); margin: 0% 0 0 0%;"
                     data--270p-top="display: block; opacity: 1; transform: scale(20) rotate(0deg); margin: 0% 0 0 0%;"
@@ -272,66 +321,116 @@
                 </p>
 
 <!-- Scene3 Happy New Year -->
-                <img src="img/happyNewYear.png" class="scene3-bg1-happyNewYear"
+                <img src="img/objects/happyNewYear-00.png" 
+                    class="scene3-bg1-happyNewYear"
                     data-anchor-target=".scene2-bg1_5"
                     data--445p-top="display: block; opacity: 0;"
-                    data--460p-top="display: block; opacity: 1;">
+                    data--460p-top="display: block; opacity: 1;"
+                    data--490p-top="display: none; opacity: 1;">
+                <img src="img/objects/happyNewYear-01.png" 
+                    class="scene3-bg1-happyNewYear"
+                    data-anchor-target=".scene2-bg1_5"
+                    data--460p-top="display: block; opacity: 0;"
+                    data--490p-top="display: block; opacity: 1;">
             </div>
         </div>
 
 <!-- Scene4 The End -->
         <div class="scene4"
             data-anchor-target=".scene2-bg1_5"
-            data--480p-top="display: flex; opacity: 0;"
-            data--500p-top="display: flex; opacity: 1;">
+            data--520p-top="display: flex; opacity: 0;"
+            data--540p-top="display: flex; opacity: 1;">
 
-            <img id="page04" src="img/ZYXEL-logo.svg" class="scene4-logo"
+            <img id="page04" src="img/objects/ZYXEL-logo.svg" class="scene4-logo"
                 data-anchor-target=".scene2-bg1_5"
-                data--505p-top="opacity: 0;"
-                data--525p-top="opacity: 1;">
+                data--545p-top="opacity: 0;"
+                data--565p-top="opacity: 1;">
         </div>
 
-        <div id="page02" class="scene1-bg2_5"></div>
+        <div class="scene1-bg2_5"></div>
 
-        <div id="page03" class="scene2-bg1_5"></div>
-
-        <div id="page05"></div>
+        <div class="scene2-bg1_5"></div>
     </div>
 
     <div class="snow-world"></div>
 
+    <div class="backToTop-box">
+        <img src="img/components/backToTop.svg" 
+            id="scrollToTop"
+            class="backToTop"
+            onclick="reloadPage()"
+            data-anchor-target=".scene2-bg1_5"
+            data--560p-top="opacity: 0; display: none;"
+            data--570p-top="opacity: 0; display: block;"
+            data--590p-top="opacity: 1; display: block;">
+    </div>
+
     <footer class="footer">
-        <img src="img/components/ZYXEL-copyright.svg" class="footer-copyright"
+        <img src="img/components/ZYXEL-copyright.svg" 
+            class="footer-copyright"
+            title="Developed by 朱郡廷"
             data-anchor-target=".scene2-bg1_5"
             data-300p-top="display: block;"
             data-285p-top="display: none;"
             data--195p-top="display: block;">
             
-        <img src="img/components/ZYXEL-copyright-white.svg" class="footer-copyright"
+        <img src="img/components/ZYXEL-copyright-white.svg" 
+            class="footer-copyright"
+            title="Developed by 朱郡廷"
             data-anchor-target=".scene2-bg1_5"
             data-300p-top="display: none;"
             data-285p-top="display: block;"
             data--195p-top="display: none;">
 
         <div class="footer-share">
-            <div class="footer-share-icon">
-                <a href="" onclick="lds_click()"><img src="img/components/share-linkedin.svg"></a>
-            </div>
+            <svg viewBox="0 0 28 28" 
+                xmlns="http://www.w3.org/2000/svg" 
+                data-js="linkedin-share" 
+                class="footer-share-icon footer-share-icon-linkedin">
+                    <title>LinkedIn</title>
+                    <path d="M26 0H1.99375C0.89375 0 0 0.90625 0 2.01875V25.9813C0 27.0938 0.89375 28 1.99375 28H26C27.1 28 28 27.0938 28 25.9813V2.01875C28 0.90625 27.1 0 26 0ZM8.4625 24H4.3125V10.6375H8.46875V24H8.4625ZM6.3875 8.8125C5.05625 8.8125 3.98125 7.73125 3.98125 6.40625C3.98125 5.08125 5.05625 4 6.3875 4C7.7125 4 8.79375 5.08125 8.79375 6.40625C8.79375 7.7375 7.71875 8.8125 6.3875 8.8125ZM24.0187 24H19.8687V17.5C19.8687 15.95 19.8375 13.9563 17.7125 13.9563C15.55 13.9563 15.2188 15.6438 15.2188 17.3875V24H11.0688V10.6375H15.05V12.4625H15.1062C15.6625 11.4125 17.0188 10.3062 19.0375 10.3062C23.2375 10.3062 24.0187 13.075 24.0187 16.675V24Z"/>
+            </svg>
+            
+            <svg viewBox="0 0 28 28" 
+                xmlns="http://www.w3.org/2000/svg" 
+                data-js="facebook-share" 
+                class="footer-share-icon footer-share-icon-facebook">
+                    <title>Facebook</title>
+                    <path d="M25 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3L0 25C0 25.7956 0.31607 26.5587 0.87868 27.1213C1.44129 27.6839 2.20435 28 3 28H11.5781V18.4806H7.64062V14H11.5781V10.585C11.5781 6.70062 13.8906 4.555 17.4325 4.555C19.1288 4.555 20.9025 4.8575 20.9025 4.8575V8.67H18.9481C17.0225 8.67 16.4219 9.865 16.4219 11.0906V14H20.7206L20.0331 18.4806H16.4219V28H25C25.7956 28 26.5587 27.6839 27.1213 27.1213C27.6839 26.5587 28 25.7956 28 25V3C28 2.20435 27.6839 1.44129 27.1213 0.87868C26.5587 0.316071 25.7956 0 25 0Z"/>
+            </svg>
 
-            <div class="footer-share-icon">
-                <a href="" data-js="facebook-share"><img src="img/components/share-facebook.svg"></a>
-            </div>
-
-            <div class="footer-share-icon">
-                <a href="" onclick="tws_click()"><img src="img/components/share-twitter.svg"></a>
-            </div>
+            <svg viewBox="0 0 28 28" 
+                xmlns="http://www.w3.org/2000/svg"
+                data-js="twitter-share" 
+                class="footer-share-icon footer-share-icon-twitter">
+                    <title>Twitter</title>
+                    <path d="M25 0H3C1.34375 0 0 1.34375 0 3V25C0 26.6562 1.34375 28 3 28H25C26.6562 28 28 26.6562 28 25V3C28 1.34375 26.6562 0 25 0ZM21.9438 9.925C21.9563 10.1 21.9562 10.2813 21.9562 10.4563C21.9562 15.875 17.8312 22.1187 10.2937 22.1187C7.96875 22.1187 5.8125 21.4438 4 20.2812C4.33125 20.3188 4.65 20.3312 4.9875 20.3312C6.90625 20.3312 8.66875 19.6812 10.075 18.5812C8.275 18.5437 6.7625 17.3625 6.24375 15.7375C6.875 15.8312 7.44375 15.8313 8.09375 15.6625C6.21875 15.2813 4.8125 13.6312 4.8125 11.6375V11.5875C5.35625 11.8937 5.99375 12.0812 6.6625 12.1062C6.10027 11.7323 5.63936 11.2249 5.32092 10.6295C5.00247 10.034 4.83639 9.369 4.8375 8.69375C4.8375 7.93125 5.0375 7.23125 5.39375 6.625C7.4125 9.1125 10.4437 10.7375 13.8438 10.9125C13.2625 8.13125 15.3438 5.875 17.8438 5.875C19.025 5.875 20.0875 6.36875 20.8375 7.16875C21.7625 6.99375 22.65 6.65 23.4375 6.18125C23.1312 7.13125 22.4875 7.93125 21.6375 8.4375C22.4625 8.35 23.2625 8.11875 24 7.8C23.4438 8.61875 22.7438 9.34375 21.9438 9.925Z"/>
+            </svg>
         </div>
     </footer>
 
-
+<!-- JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        function GetIEVersion() {
+            var sAgent = window.navigator.userAgent;
+            var Idx = sAgent.indexOf("MSIE");
+            // If IE, return version number.
+            if (Idx > 0) 
+              return parseInt(sAgent.substring(Idx+ 5, sAgent.indexOf(".", Idx)));
+            // If IE 11 then look for Updated user agent string.
+            else if (!!navigator.userAgent.match(/Trident\/7\./)) 
+              return 11;
+            else
+              return 0; //It is not IE
+          }
+    
+          if (GetIEVersion() > 0) 
+             alert("Please use Google Chrome for better experience.");
+    </script>
     <script src="js/skrollr.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/yoshi.js"></script>
-    <script src="js/app.js"></script>
 </body>
 </html>

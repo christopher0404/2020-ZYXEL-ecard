@@ -1,31 +1,53 @@
 .scene1 {
     &-bg1 {
         position: relative;
-        background: url("../img/sky_clouds.png") no-repeat center;
+        background: #ADE6E6;
         background-size: cover;
         height: 81rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        /* z-index: 2; */
+        overflow: hidden;
     }
 
     &-bg1_5 {
         position: relative;
         background-color: #ADE6E6;
-        height: 20rem;
+        height: 40rem;
     }
 
     &-bg2 {
-        background: #ADE6E6 url("../img/ocean_clouds.png") no-repeat center;
-        background-size: cover;
         height: 101rem;
         position: sticky;
         top: 0;
-        // overflow: hidden;
+        // bottom: 0;
+        // left: 0;
+        // right: 0;
+        overflow: hidden;
         display: flex;
         justify-content: center;
-        // z-index: 1;
+
+        &-sky {
+            position: relative;
+            background-color: #ADE6E6;
+            height: 57rem;
+            width: 100vw;
+            z-index: -1;
+        }
+        &-ocean {
+            position: absolute;
+            bottom: 0;
+            background-color: #418BCE;
+            height: 44rem;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+
+            &-waves {
+                height: 80%;
+                animation: moveToLeft 50s linear infinite;
+            }
+        }
     }
 
     &-bg2_5 {
@@ -33,18 +55,31 @@
         height: 151rem;
     }
 
-    &-sky {
-        width: 100vw;
+    &-clouds {
+        position: absolute;
+        left: 0;
+        animation: moveToLeft 200s linear infinite;
+        opacity: 0.8;
     }
 
     &-sun {
-        position: absolute;
-        top: 15rem;
-        width: 48rem;
-        z-index: 2;
-
-        @media only screen and (max-width: $bp-medium) {
-            width: 36rem;
+        &-01 {
+            position: absolute;
+            top: 15rem;
+            width: 48rem;
+            z-index: 3;
+            animation: blur 3s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
+    
+            @media only screen and (max-width: $bp-medium) {
+                width: 36rem;
+            }
+        }
+        &-02 {
+            position: absolute;
+            top: 15rem;
+            left: 60%;
+            width: 16rem;
+            z-index: -1;
         }
     }
 
@@ -58,11 +93,9 @@
 
         &-01 {
             position: absolute;
-            // right: 22vw;
             bottom: -7rem;
             height: 230rem;
             transform-origin: 51.18% 72.3%;
-            // transform-origin: 86.28% 72.3%;
         }
     }
 }

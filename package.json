@@ -1,8 +1,15 @@
 {
-  "name": "zyxel",
+  "name": "zyxel-seasons-greetings-2020",
+  "title": "zyxel-seasons-greetings-2020",
+  "description": "scroll e-card",
   "version": "1.0.0",
-  "description": "e-card",
-  "main": "app.js",
+  "author": {
+    "name": "Chu Jun Ting",
+    "email": "ctc2096@gmail.com",
+    "url": "https://zhujunting.myportfolio.com"
+  },
+  "license": "ISC",
+  "main": "main.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
@@ -12,16 +19,13 @@
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
-  "author": "Zhu-Jun-Ting",
-  "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^7.1.4",
+    "autoprefixer": "^9.7.1",
     "concat": "^1.0.3",
+    "jquery": "^3.4.1",
     "node-sass": "^4.13.0",
     "npm-run-all": "^4.1.1",
-    "postcss-cli": "^4.1.1"
-  },
-  "dependencies": {
-    "jquery": "^3.4.1"
+    "postcss-cli": "^4.1.1",
+    "stickybits": "^3.7.0"
   }
 }

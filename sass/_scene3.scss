@@ -6,9 +6,13 @@
         width: 192rem;
         position: sticky;
         top: 0;
+        // bottom: 0;
+        // left: 0;
+        // right: 0;
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
         z-index: -1;
 
         &-sun {
@@ -16,6 +20,13 @@
             top: 10rem;
             left: 75vw;
             width: 20rem;
+            z-index: -3;
+        }
+
+        &-clouds {
+            position: absolute;
+            left: 0;
+            animation: moveToLeft 200s linear infinite;
             z-index: -2;
         }
         
@@ -24,13 +35,15 @@
             top: -205%;
             width: 192rem;
             z-index: -1;
+    
+            @media only screen and (max-width: $bp-small) {
+                width: 182rem;
+            }
         }
 
-        &-skydiving {
-            // margin-top: 10%;
-            // margin-left: -3%;
-    
+        &-skydiving {    
             @media only screen and (max-width: $bp-medium) {
+                margin-bottom: 10rem !important;
                 width: 40rem;
             }
         }
@@ -41,7 +54,7 @@
             width: 50rem;
     
             @media only screen and (max-width: $bp-medium) {
-                top: 18%;
+                top: 16%;
                 width: 30rem;
             }
         }
@@ -51,6 +64,9 @@
     background-color: #FF8900;
     position: sticky;
     top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
     width: 100vw;
     height: 100vh;
     display: flex;

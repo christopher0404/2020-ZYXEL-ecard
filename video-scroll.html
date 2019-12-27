@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zyxel Season's Greetings 2020</title>
+
+    <style>
+        .video__container {
+            height: 400rem;
+        }
+        .video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        #time{
+            position:fixed;
+            bottom: 1vh;
+            left: 2vw;
+            z-index: 2;
+            font-family: sans-serif;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="time"></p>
+    <div class="video__container">
+        <video class="video" id="video" tabindex="0" autobuffer preload>
+            <source src="media/video/zyxel-seasons-greetings-2020.mp4" type="video/mp4">
+            Your browser is not supported!
+        </video>
+    </div>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script>
+        $(function () {
+            var vid = $('#video')[0]; // jquery option
+
+            // pause video on load
+            vid.pause();
+
+            // pause video on document scroll (stops autoplay once scroll started)
+            window.onscroll = function () {
+                vid.pause();
+                //console.log(vid.currentTime, window.pageYOffset / 400);
+                $("#time").text(vid.currentTime);
+            
+                if (vid.currentTime > 7 && vid.currentTime < 8) {
+                    $('.content').addClass('active');
+                } else {
+                    $('.content').removeClass('active');
+                }
+            };
+
+            // refresh video frames on interval for smoother playback
+            setInterval(function () {
+                if((window.pageYOffset / 100) > 5 && (window.pageYOffset / 100) < 6){
+                    vid.pause();
+                } else {
+                    vid.currentTime = window.pageYOffset / 100;
+                }
+            }, 32);
+            });
+    </script>
+</body>
+</html>

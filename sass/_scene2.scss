@@ -5,6 +5,9 @@
         height: 101rem;
         position: sticky;
         top: 0;
+        // bottom: 0;
+        // left: 0;
+        // right: 0;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -29,7 +32,7 @@
                 position: absolute;
                 bottom: 0rem;
                 width: 700rem;
-                z-index: 2;
+                z-index: 5;
             }
         }
     
@@ -49,10 +52,14 @@
             position: absolute;
             bottom: 20rem;
             left: 50vw;
-            height: 50rem;
+            height: 45rem;
     
             @media only screen and (max-width: $bp-medium) {
                 left: 25vw;
+            }
+    
+            @media only screen and (max-width: $bp-small) {
+                bottom: 25rem;
             }
         }
 
@@ -60,10 +67,14 @@
             position: absolute;
             bottom: 10rem;
             left: 25vw;
-            height: 45rem;
+            height: 40rem;
     
             @media only screen and (max-width: $bp-medium) {
                 left: -10vw;
+            }
+    
+            @media only screen and (max-width: $bp-small) {
+                bottom: 20rem;
             }
         }
     }
@@ -77,17 +88,28 @@
     &-bg2 {
         background: #F9E7D3 no-repeat center;
         background-size: cover;
-        // height: 321rem;
         width: 192rem;
         position: sticky;
         top: 0;
+        // bottom: 0;
+        // left: 0;
+        // right: 0;
         display: flex;
         justify-content: center;
 
         &-mountain {
             position: absolute;
             width: 192rem;
-            // bottom: -45rem;
+        }
+
+        &-stars {
+            position: absolute;
+            top: 20%;
+            width: 65rem;
+    
+            @media only screen and (max-width: $bp-small) {
+                width: 45rem;
+            }
         }
 
         &-moon {
@@ -105,44 +127,54 @@
         &-hiker {
             &-1 {
                 position: absolute;
-                top: 64rem;
+                top: 61.5rem;
                 left: 33%;
     
+                @media only screen and (max-width: $bp-medium) {
+                    left: 15%;
+                }
+    
                 @media only screen and (max-width: $bp-small) {
-                    left: 7%;
+                    top: 60.5rem;
+                    left: -8%;
                 }
             }
 
             &-2 {
                 position: absolute;
-                top: 60rem;
+                top: 57.5rem;
                 left: 37%;
     
+                @media only screen and (max-width: $bp-medium) {
+                    left: 23%;
+                }
+    
                 @media only screen and (max-width: $bp-small) {
-                    left: 12%;
+                    top: 56.5rem;
+                    left: 3%;
                 }
             }
 
             &-3 {
                 position: absolute;
-                top: 52rem;
-                left: 55%;
+                top: 50.5rem;
+                left: 53%;
+    
+                @media only screen and (max-width: $bp-small) {
+                    top: 48.5rem;
+                }
             }
 
             &-4 {
                 position: absolute;
-                top: 53rem;
-                left: 58.5%;
+                top: 51.5rem;
+                left: 55.5%;
+    
+                @media only screen and (max-width: $bp-small) {
+                    top: 49.5rem;
+                    left: 57.5%;
+                }
             }
         }
     }
-
-    
-
-    // &-bg2_5 {
-    //     background: #666 no-repeat center;
-    //     background-size: cover;
-    //     height: 101rem;
-    //     position: relative;
-    // }
 }

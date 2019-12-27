@@ -311,3 +311,22 @@ $.fn.Yoshi=function(method,options){
 
 // REQUESTANIMATIONFRAME
 window.requestAnimFrame=(function(){ return window.requestAnimationFrame ||  window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback){ window.setTimeout(callback, 1000 / 60); }; })();
+
+// Snow World
+if (isMobile.any()) {
+    $('.snow-world').Yoshi({
+        num_particles: 20,
+        particle_color: '#ffffff',
+        particle_size: 0,
+        particle_shape: 'circle',
+        max_size: 3
+    });
+} else {
+    $('.snow-world').Yoshi({
+        num_particles: 100,
+        particle_color: '#ffffff',
+        particle_size: 0,
+        particle_shape: 'circle',
+        max_size: 5
+    });
+}

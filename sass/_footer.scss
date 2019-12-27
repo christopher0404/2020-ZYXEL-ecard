@@ -2,31 +2,93 @@
     position: fixed;
     width: 100vw;
     bottom: 2%;
-    z-index: 90;
+    z-index: 50;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 2vw;
+    align-items: flex-end;
+    padding: 0 2vw 0 1.5vw;
 
     &-copyright {
-        // position: absolute;
-        // left: 2%;
-        width: 16rem;
+        width: 18rem;
+        opacity: 0.5;
+        transition: .8s;
+    
+        &:hover {
+            opacity: 1;
+        }
+    
+        @media only screen and (max-width: $bp-small) {
+            width: 12rem;
+        }
     }
 
     &-share {
         display: flex;
+        display: -webkit-box;
         justify-content: space-evenly;
+    
+        @media only screen and (max-width: $bp-small) {
+            display: flex;
+            flex-direction: column;
+        }
 
         &-icon {
             margin-left: 1.5rem;
-            width: 3rem;
+            width: 3.5rem;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: .8s;
+        
+            &:hover {
+                opacity: 1;
+            }
+    
+            @media only screen and (max-width: $bp-small) {
+                margin-top: 1.5rem;
+                opacity: 0.3;
+            }
+
+            &-linkedin {
+                fill: #000;
+                &:hover {
+                    fill: #0077b5;
+                }
+            }
+            &-facebook {
+                fill: #000;
+                &:hover {
+                    fill: #3b5998;
+                }
+            }
+            &-twitter {
+                fill: #000;
+                &:hover {
+                    fill: #1da1f2;
+                }
+            }
         }
     }
 }
-.noise {
+.backToTop {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: 50;
+    bottom: 4rem;
+    width: 8rem;
+    cursor: pointer;
+    opacity: 0.55;
+    transition: .6s;
+    z-index: 100;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        width: 7rem;
+    }
+
+    &-box {
+        display: flex;
+        justify-content: center;
+        z-index: 90;
+    }
 }

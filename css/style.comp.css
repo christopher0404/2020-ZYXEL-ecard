@@ -14,12 +14,21 @@ a:visited {
 
 html {
   box-sizing: border-box;
-  font-family: 'Didact Gothic', sans-serif;
   font-size: 62.5%; }
   @media only screen and (max-width: 52em) {
     html {
       font-size: 37.5%; } }
 
+body {
+  width: 100vw;
+  overflow-x: hidden; }
+
+/*
+#skrollr-body {
+    // overflow: scroll;
+    // height: 100%;
+}
+*/
 #info {
   position: fixed;
   top: 2rem;
@@ -27,16 +36,37 @@ html {
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   padding: 2rem;
-  z-index: 99;
+  z-index: 30;
   font-size: 2rem; }
 
 #progressBar {
-  position: fixed;
+  position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   background-color: #fff;
-  width: 1rem;
-  z-index: 999; }
+  opacity: 0.5;
+  height: 1rem; }
+  @media only screen and (max-height: 37.5em) {
+    #progressBar {
+      height: 0.6rem; } }
+
+.overlay {
+  display: none; }
+  @media only screen and (orientation: landscape) and (max-width: 900px) {
+    .overlay {
+      position: fixed;
+      z-index: 40;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center; } }
+
+#rotateDevice {
+  width: 10rem; }
 
 .noise {
   position: fixed;
@@ -46,10 +76,8 @@ html {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 50; }
+  z-index: 20; }
 
-/* # Snow Effect
-================================================== */
 .snow-world {
   position: fixed;
   top: 0;
@@ -65,107 +93,168 @@ html {
   width: 100%;
   height: 100%; }
 
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    transform: translateY(1rem); }
+  100% {
+    opacity: 0;
+    transform: translateY(5rem); } }
+
+@keyframes blur {
+  0% {
+    filter: blur(0rem); }
+  50% {
+    filter: blur(2rem); }
+  100% {
+    filter: blur(0rem); } }
+
+@keyframes moveToLeft {
+  from {
+    transform: translateX(0%); }
+  to {
+    transform: translateX(-55%); } }
+
 @font-face {
-  font-family: "Galano Grotesque DEMO";
-  src: url("/fonts/Rene Bieder - Galano Grotesque DEMO Bold.otf") format("otf"); }
+  font-family: "Galano Grotesque";
+  src: url("/fonts/GalanoGrotesque-SemiBold.otf") format("opentype"), url("/fonts/GalanoGrotesque-Regular.otf") format("opentype"); }
 
 .paragraph {
-  font-size: 5rem;
-  font-weight: bold;
-  color: #000; }
+  font-family: "Galano Grotesque", sans-serif;
+  font-size: 4.5rem;
+  color: #000;
+  z-index: 4; }
   @media only screen and (max-width: 37.5em) {
     .paragraph {
-      font-size: 3rem; } }
+      font-size: 4rem; } }
 
 .p-page-1 {
   position: absolute;
-  bottom: 10rem;
-  margin: 0 auto;
-  text-align: center;
-  z-index: 3; }
+  top: 58rem;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .p-page-1 {
+      top: 50rem;
+      width: 30rem; } }
 
 .p-page-2 {
   position: absolute;
-  top: 20%;
-  left: 10vw;
-  max-width: 50rem; }
-  @media only screen and (max-width: 52em) {
+  top: 7%;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
     .p-page-2 {
-      top: 10%;
-      left: 5vw;
-      max-width: 28rem; } }
+      width: 38rem; } }
 
 .p-page-3 {
   position: absolute;
-  top: 10%; }
+  top: 7%;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .p-page-3 {
+      width: 40rem; } }
 
 .p-page-4 {
   position: absolute;
-  top: 10%;
+  top: 7%;
+  text-align: center;
   color: #fff; }
+  @media only screen and (max-width: 37.5em) {
+    .p-page-4 {
+      width: 32rem; } }
 
 .p-page-5 {
   position: absolute;
-  top: 65%;
-  color: #fff; }
+  top: 63.5%;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .p-page-5 {
+      top: 65.5%;
+      color: #fff; } }
 
 .p-page-6 {
   position: absolute;
   top: 37%;
-  left: 68vw;
-  color: #000; }
-  @media only screen and (max-width: 52em) {
+  left: 68vw; }
+  @media only screen and (max-width: 37.5em) {
     .p-page-6 {
-      display: none !important; } }
+      top: 63%;
+      left: auto;
+      text-align: center; } }
 
 .p-page-7 {
   position: absolute;
-  top: 40%;
-  left: 8vw;
-  color: #000; }
+  top: 10%;
+  text-align: center; }
   @media only screen and (max-width: 52em) {
     .p-page-7 {
-      display: none !important; } }
+      top: 7%; } }
 
 .scene1-bg1 {
   position: relative;
-  background: url("../img/sky_clouds.png") no-repeat center;
+  background: #ADE6E6;
   background-size: cover;
   height: 81rem;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden; }
 
 .scene1-bg1_5 {
   position: relative;
   background-color: #ADE6E6;
-  height: 20rem; }
+  height: 40rem; }
 
 .scene1-bg2 {
-  background: #ADE6E6 url("../img/ocean_clouds.png") no-repeat center;
-  background-size: cover;
   height: 101rem;
   position: sticky;
   top: 0;
   overflow: hidden;
   display: flex;
   justify-content: center; }
+  .scene1-bg2-sky {
+    position: relative;
+    background-color: #ADE6E6;
+    height: 57rem;
+    width: 100vw;
+    z-index: -1; }
+  .scene1-bg2-ocean {
+    position: absolute;
+    bottom: 0;
+    background-color: #418BCE;
+    height: 44rem;
+    width: 100vw;
+    display: flex;
+    align-items: center; }
+    .scene1-bg2-ocean-waves {
+      height: 80%;
+      animation: moveToLeft 50s linear infinite; }
 
 .scene1-bg2_5 {
   background-color: #418BCE;
   height: 151rem; }
 
-.scene1-sky {
-  width: 100vw; }
+.scene1-clouds {
+  position: absolute;
+  left: 0;
+  animation: moveToLeft 200s linear infinite;
+  opacity: 0.8; }
 
-.scene1-sun {
+.scene1-sun-01 {
   position: absolute;
   top: 15rem;
   width: 48rem;
-  z-index: 2; }
+  z-index: 3;
+  animation: blur 3s cubic-bezier(0.645, 0.045, 0.355, 1) infinite; }
   @media only screen and (max-width: 52em) {
-    .scene1-sun {
+    .scene1-sun-01 {
       width: 36rem; } }
+
+.scene1-sun-02 {
+  position: absolute;
+  top: 15rem;
+  left: 60%;
+  width: 16rem;
+  z-index: -1; }
 
 .scene1-boat-00 {
   position: absolute;
@@ -204,7 +293,7 @@ html {
       position: absolute;
       bottom: 0rem;
       width: 700rem;
-      z-index: 2; }
+      z-index: 5; }
   .scene2-bg1-hill {
     position: absolute;
     bottom: 0;
@@ -217,18 +306,24 @@ html {
     position: absolute;
     bottom: 20rem;
     left: 50vw;
-    height: 50rem; }
+    height: 45rem; }
     @media only screen and (max-width: 52em) {
       .scene2-bg1-manRight {
         left: 25vw; } }
+    @media only screen and (max-width: 37.5em) {
+      .scene2-bg1-manRight {
+        bottom: 25rem; } }
   .scene2-bg1-manLeft {
     position: absolute;
     bottom: 10rem;
     left: 25vw;
-    height: 45rem; }
+    height: 40rem; }
     @media only screen and (max-width: 52em) {
       .scene2-bg1-manLeft {
         left: -10vw; } }
+    @media only screen and (max-width: 37.5em) {
+      .scene2-bg1-manLeft {
+        bottom: 20rem; } }
 
 .scene2-bg1_5 {
   position: relative;
@@ -247,6 +342,13 @@ html {
   .scene2-bg2-mountain {
     position: absolute;
     width: 192rem; }
+  .scene2-bg2-stars {
+    position: absolute;
+    top: 20%;
+    width: 65rem; }
+    @media only screen and (max-width: 37.5em) {
+      .scene2-bg2-stars {
+        width: 45rem; } }
   .scene2-bg2-moon {
     position: absolute;
     top: 10rem;
@@ -258,26 +360,41 @@ html {
         width: 18rem; } }
   .scene2-bg2-hiker-1 {
     position: absolute;
-    top: 64rem;
+    top: 61.5rem;
     left: 33%; }
+    @media only screen and (max-width: 52em) {
+      .scene2-bg2-hiker-1 {
+        left: 15%; } }
     @media only screen and (max-width: 37.5em) {
       .scene2-bg2-hiker-1 {
-        left: 7%; } }
+        top: 60.5rem;
+        left: -8%; } }
   .scene2-bg2-hiker-2 {
     position: absolute;
-    top: 60rem;
+    top: 57.5rem;
     left: 37%; }
+    @media only screen and (max-width: 52em) {
+      .scene2-bg2-hiker-2 {
+        left: 23%; } }
     @media only screen and (max-width: 37.5em) {
       .scene2-bg2-hiker-2 {
-        left: 12%; } }
+        top: 56.5rem;
+        left: 3%; } }
   .scene2-bg2-hiker-3 {
     position: absolute;
-    top: 52rem;
-    left: 55%; }
+    top: 50.5rem;
+    left: 53%; }
+    @media only screen and (max-width: 37.5em) {
+      .scene2-bg2-hiker-3 {
+        top: 48.5rem; } }
   .scene2-bg2-hiker-4 {
     position: absolute;
-    top: 53rem;
-    left: 58.5%; }
+    top: 51.5rem;
+    left: 55.5%; }
+    @media only screen and (max-width: 37.5em) {
+      .scene2-bg2-hiker-4 {
+        top: 49.5rem;
+        left: 57.5%; } }
 
 .scene3-bg1 {
   background: #F9E7D3 no-repeat center;
@@ -289,20 +406,30 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   z-index: -1; }
   .scene3-bg1-sun {
     position: absolute;
     top: 10rem;
     left: 75vw;
     width: 20rem;
+    z-index: -3; }
+  .scene3-bg1-clouds {
+    position: absolute;
+    left: 0;
+    animation: moveToLeft 200s linear infinite;
     z-index: -2; }
   .scene3-bg1-hotAirBalloon {
     position: absolute;
     top: -205%;
     width: 192rem;
     z-index: -1; }
+    @media only screen and (max-width: 37.5em) {
+      .scene3-bg1-hotAirBalloon {
+        width: 182rem; } }
   @media only screen and (max-width: 52em) {
     .scene3-bg1-skydiving {
+      margin-bottom: 10rem !important;
       width: 40rem; } }
   .scene3-bg1-happyNewYear {
     position: absolute;
@@ -310,7 +437,7 @@ html {
     width: 50rem; }
     @media only screen and (max-width: 52em) {
       .scene3-bg1-happyNewYear {
-        top: 18%;
+        top: 16%;
         width: 30rem; } }
 
 .scene4 {
@@ -329,81 +456,566 @@ html {
 .header {
   position: fixed;
   width: 100vw;
-  top: 3rem;
-  z-index: 90; }
+  top: 0;
+  padding-top: 3rem;
+  z-index: 50; }
 
-.nav {
-  display: flex;
+.fullscreen {
   position: absolute;
-  right: 10rem; }
-  .nav-line {
+  left: 3rem;
+  width: 3.3rem;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.8s;
+  /*
+    @media only screen and (max-width: $bp-small) {
+        display: none;
+    }*/ }
+  .fullscreen:hover {
+    opacity: 1; }
+
+.reminder {
+  position: absolute;
+  top: 8rem;
+  left: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 3rem;
+  z-index: 50; }
+  @media only screen and (max-width: 52em) {
+    .reminder {
+      display: none; } }
+  @media only screen and (min-width: 110em) {
+    .reminder {
+      display: none; } }
+  .reminder-message {
+    font-family: "Galano Grotesque", sans-serif;
+    font-size: 3rem;
+    color: #fff; }
+  .reminder-close {
     position: absolute;
-    right: 10rem;
-    top: .8rem;
-    height: 1px;
-    width: 23rem;
-    background-color: #000; }
-  .nav-dot {
-    height: 1.8rem;
-    width: 1.8rem;
-    background-color: #fff;
-    border-radius: 50%;
-    border: 0.3rem solid #000;
-    margin-left: 3.5rem;
-    cursor: pointer;
-    transition: .5s; }
-    .nav-dot:hover {
-      transform: scale(1.5); }
+    top: 0;
+    right: 1.5rem;
+    font-size: 4rem;
+    color: #fff;
+    cursor: pointer; }
 
 .sound {
   position: absolute;
-  top: -1.7rem;
-  right: 4rem;
-  width: 3rem;
+  top: 1rem;
+  right: 7rem;
   cursor: pointer;
-  opacity: 0.55;
-  transition: .6s; }
-  .sound:hover {
-    opacity: 1; }
-  .sound-off {
+  opacity: 0.5;
+  transition: .8s; }
+  .sound-on, .sound-off {
     position: absolute;
-    top: 1rem; }
+    top: 1rem;
+    width: 5rem; }
+    .sound-on:hover, .sound-off:hover {
+      opacity: 1; }
 
+.scroll {
+  width: 13.5rem;
+  height: 13.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  font-size: 2.5rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 50; }
+  .scroll p {
+    font-family: "Galano Grotesque", sans-serif;
+    margin-bottom: -1rem; }
+  .scroll-icon {
+    width: 4rem;
+    height: 7rem;
+    border-radius: 2.5rem;
+    box-shadow: inset 0 0 0 2px #fff;
+    display: flex;
+    justify-content: center; }
+    .scroll-icon:before {
+      content: '';
+      width: 1rem;
+      height: 1rem;
+      background-color: #fff;
+      border-radius: 50%;
+      animation-duration: 1.6s;
+      animation-iteration-count: infinite;
+      animation-name: scroll; }
+  .scroll-reminder {
+    position: fixed;
+    width: 100vw;
+    padding-right: 2vw;
+    bottom: 8rem;
+    z-index: 50;
+    display: flex;
+    justify-content: flex-end; }
+    @media only screen and (max-width: 52em) {
+      .scroll-reminder {
+        padding: 0;
+        bottom: 0;
+        justify-content: center; } }
+    @media only screen and (orientation: landscape) and (max-width: 767px) {
+      .scroll-reminder {
+        display: none; } }
+
+/*
+.nav {
+    display: flex;
+    position: absolute;
+    right: 10rem;
+    
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
+
+    &-line {
+        position: absolute;
+        right: 10rem;
+        top: 3.8rem;
+        height: 1px;
+        width: 28rem;
+        background-color: #000;
+    
+        @media only screen and (max-width: $bp-medium) {
+            display: none;
+        }
+    }
+
+    &-dot {
+        height: 1.8rem;
+        width: 1.8rem;
+        background-color: #fff;
+        border-radius: 50%;
+        border: 0.3rem solid #000;
+        margin-left: 3.5rem;
+        cursor: pointer;
+        transition: .5s;
+    
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+}*/
 .footer {
   position: fixed;
   width: 100vw;
   bottom: 2%;
-  z-index: 90;
+  z-index: 50;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 2vw; }
-  @media only screen and (max-width: 37.5em) {
-    .footer {
-      align-items: flex-end; } }
+  align-items: flex-end;
+  padding: 0 2vw 0 1.5vw; }
   .footer-copyright {
-    width: 16rem;
+    width: 18rem;
     opacity: 0.5;
-    transition: .6s; }
+    transition: .8s; }
     .footer-copyright:hover {
       opacity: 1; }
     @media only screen and (max-width: 37.5em) {
       .footer-copyright {
-        width: 10rem; } }
+        width: 12rem; } }
   .footer-share {
     display: flex;
+    display: -webkit-box;
     justify-content: space-evenly; }
     @media only screen and (max-width: 37.5em) {
       .footer-share {
+        display: flex;
         flex-direction: column; } }
     .footer-share-icon {
       margin-left: 1.5rem;
-      width: 3rem;
+      width: 3.5rem;
       cursor: pointer;
       opacity: 0.5;
-      transition: .6s; }
+      transition: .8s; }
       .footer-share-icon:hover {
         opacity: 1; }
       @media only screen and (max-width: 37.5em) {
         .footer-share-icon {
-          margin-top: 1.5rem; } }
+          margin-top: 1.5rem;
+          opacity: 0.3; } }
+      .footer-share-icon-linkedin {
+        fill: #000; }
+        .footer-share-icon-linkedin:hover {
+          fill: #0077b5; }
+      .footer-share-icon-facebook {
+        fill: #000; }
+        .footer-share-icon-facebook:hover {
+          fill: #3b5998; }
+      .footer-share-icon-twitter {
+        fill: #000; }
+        .footer-share-icon-twitter:hover {
+          fill: #1da1f2; }
+
+.backToTop {
+  position: fixed;
+  bottom: 4rem;
+  width: 8rem;
+  cursor: pointer;
+  opacity: 0.55;
+  transition: .6s;
+  z-index: 100; }
+  .backToTop:hover {
+    opacity: 1; }
+  @media only screen and (max-width: 52em) {
+    .backToTop {
+      width: 7rem; } }
+  .backToTop-box {
+    display: flex;
+    justify-content: center;
+    z-index: 90; }
+
+.container__mobile {
+  overflow: hidden;
+  /*
+    @media only screen and (min-width: $bp-medium) {
+        display: none;
+    }
+    */ }
+
+.title {
+  font-family: "Galano Grotesque", sans-serif;
+  font-size: 4.5rem;
+  text-align: center;
+  color: #000;
+  margin: 0 6vw;
+  z-index: 4; }
+  @media only screen and (max-width: 37.5em) {
+    .title {
+      font-size: 4rem; } }
+
+.cut1 {
+  background-color: #ADE6E6;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden; }
+  @media only screen and (orientation: landscape) {
+    .cut1 {
+      justify-content: flex-start; } }
+  .cut1__sun {
+    width: 60%;
+    animation: blur 3s cubic-bezier(0.645, 0.045, 0.355, 1) infinite; }
+    @media only screen and (orientation: landscape) {
+      .cut1__sun {
+        width: 35%;
+        margin-top: 10vh; } }
+  .cut1__clouds {
+    animation: moveToLeft 200s linear infinite;
+    opacity: 0.8; }
+    .cut1__clouds--container {
+      position: absolute;
+      width: 100%;
+      margin-top: 60%;
+      overflow: hidden;
+      z-index: 2; }
+      @media only screen and (orientation: landscape) {
+        .cut1__clouds--container {
+          margin-top: 30%; } }
+  .cut1__title {
+    bottom: 10%;
+    text-align: center; }
+
+.cut2 {
+  position: relative;
+  width: 100vw;
+  height: 100vh; }
+  @media only screen and (orientation: landscape) {
+    .cut2 {
+      height: 200vh; } }
+  .cut2__sky {
+    background-color: #ADE6E6;
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center; }
+  .cut2__title {
+    margin-top: 40%;
+    width: 30rem; }
+    @media only screen and (orientation: landscape) {
+      .cut2__title {
+        position: absolute;
+        left: 0; } }
+  .cut2__ocean {
+    background-color: #418BCE;
+    height: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .cut2__waves {
+    height: 80%;
+    animation: moveToLeft 100s linear infinite; }
+  .cut2__boat {
+    position: absolute;
+    bottom: 20%;
+    width: 70vw;
+    z-index: 2; }
+
+.cut3 {
+  background-color: #ADE6E6;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; }
+  .cut3__title {
+    position: absolute;
+    top: 20%; }
+    @media only screen and (orientation: landscape) {
+      .cut3__title {
+        top: 5%;
+        margin: 0; } }
+  .cut3__boat {
+    position: absolute;
+    bottom: -10rem;
+    left: -125rem;
+    width: 180rem; }
+    @media only screen and (orientation: landscape) {
+      .cut3__boat {
+        bottom: -15rem;
+        left: -115rem; } }
+
+.cut4 {
+  position: relative;
+  background: url("../img/objects/cut-04-0.75x.png") no-repeat center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center; }
+  @media only screen and (max-width: 900px) and (orientation: landscape) {
+    .cut4 {
+      background: url("../img/objects/cut-04-0.5x.png") no-repeat center; } }
+  @media only screen and (min-width: 768px) and (orientation: portrait) and (orientation: landscape) {
+    .cut4 {
+      background: url("../img/objects/cut-04-1x.png") no-repeat center; } }
+  .cut4__title {
+    color: #fff;
+    margin-top: 10%; }
+    @media only screen and (orientation: landscape) {
+      .cut4__title {
+        margin-top: 5%; } }
+
+.cut5 {
+  position: relative;
+  background: url("../img/objects/cut-05-0.75x.png") no-repeat center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center; }
+  @media only screen and (min-width: 768px) {
+    .cut5 {
+      background: url("../img/objects/cut-05-1x.png") no-repeat center; } }
+  .cut5__title {
+    align-self: flex-end;
+    margin-bottom: 40%; }
+    @media only screen and (orientation: landscape) {
+      .cut5__title {
+        margin-bottom: 3%; } }
+    .cut5__title span {
+      color: #FF8900; }
+
+.cut6 {
+  background-color: #F9E7D3;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .cut6__clouds {
+    animation: moveToLeft 200s linear infinite;
+    opacity: 0.8; }
+    .cut6__clouds--container {
+      position: absolute;
+      width: 100%;
+      overflow: hidden; }
+  .cut6__hotAirBalloon {
+    width: 300%;
+    margin-top: -300%;
+    z-index: 2; }
+    @media only screen and (orientation: landscape) {
+      .cut6__hotAirBalloon {
+        width: 150%;
+        margin-top: -163%; } }
+  .cut6__title {
+    margin-top: 10%; }
+    @media only screen and (orientation: landscape) {
+      .cut6__title {
+        position: absolute;
+        bottom: 30%;
+        right: 0;
+        margin: 0;
+        width: 25rem;
+        text-align: left; } }
+
+.cut7 {
+  background-color: #F9E7D3;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .cut7__skydiving {
+    width: 100%; }
+    @media only screen and (orientation: landscape) {
+      .cut7__skydiving {
+        width: 50%; } }
+  .cut7__title {
+    margin-top: 10%; }
+    @media only screen and (orientation: landscape) {
+      .cut7__title {
+        position: absolute;
+        bottom: 38%;
+        left: 1rem;
+        margin: 0;
+        width: 30rem;
+        text-align: left; } }
+
+.cut8 {
+  background-color: #F9E7D3;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .cut8__happyNewYear {
+    width: 70%; }
+    @media only screen and (orientation: landscape) {
+      .cut8__happyNewYear {
+        width: 30%; } }
+
+.cut9 {
+  background-color: #FF8900;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .cut9__logo {
+    width: 60%; }
+    @media only screen and (orientation: landscape) {
+      .cut9__logo {
+        width: 30%; } }
+  .cut9__backToTop {
+    width: 7rem;
+    cursor: pointer;
+    transition: .6s;
+    z-index: 100; }
+    .cut9__backToTop--box {
+      position: absolute;
+      bottom: 10%;
+      display: flex;
+      justify-content: center;
+      z-index: 90; }
+
+#video {
+  position: relative;
+  height: 100%; }
+
+.video {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF8900; }
+  .video__container {
+    position: relative;
+    height: 80%;
+    background-color: #FF8900;
+    z-index: 2; }
+  .video__control {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10rem;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+    transition: .8s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    @media only screen and (orientation: landscape) {
+      .video__control {
+        width: 5rem; } }
+    .video__control--play {
+      width: 8rem;
+      fill: #fff;
+      cursor: pointer; }
+    .video__control--title {
+      font-family: "Galano Grotesque", sans-serif;
+      font-size: 4rem;
+      color: #fff;
+      width: 24rem;
+      margin-top: 2rem; }
+      @media only screen and (min-width: 52em) {
+        .video__control--title {
+          width: 36rem; } }
+  .video__footer {
+    position: absolute;
+    width: 100vw;
+    bottom: 2vh;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 2vw 0 1.5vw; }
+    @media only screen and (orientation: landscape) {
+      .video__footer {
+        align-items: center; } }
+    @media only screen and (max-width: 767px) and (orientation: portrait) {
+      .video__footer {
+        padding: 0 4vw 0 3.5vw; } }
+    .video__footer--copyright {
+      width: 18rem;
+      opacity: 0.6;
+      transition: .8s; }
+      .video__footer--copyright:hover {
+        opacity: 1; }
+      @media only screen and (max-width: 37.5em) {
+        .video__footer--copyright {
+          width: 16rem; } }
+    .video__footer--share {
+      display: flex;
+      justify-content: space-evenly; }
+      @media only screen and (max-width: 37.5em) and (orientation: portrait) {
+        .video__footer--share {
+          flex-direction: column; } }
+      .video__footer--share-icon {
+        margin-left: 1.5rem;
+        width: 3.5rem;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: .8s; }
+        .video__footer--share-icon:hover {
+          opacity: 1; }
+        @media only screen and (max-width: 37.5em) and (orientation: portrait) {
+          .video__footer--share-icon {
+            margin-top: 2rem;
+            width: 4rem; } }
+        .video__footer--share-icon-linkedin {
+          fill: #fff; }
+          .video__footer--share-icon-linkedin:hover {
+            fill: #0077b5; }
+        .video__footer--share-icon-facebook {
+          fill: #fff; }
+          .video__footer--share-icon-facebook:hover {
+            fill: #3b5998; }
+        .video__footer--share-icon-twitter {
+          fill: #fff; }
+          .video__footer--share-icon-twitter:hover {
+            fill: #1da1f2; }

@@ -1,11 +1,6 @@
-// FONT VARIABLES
-$font-en: 'Didact Gothic', sans-serif;
-$font-zh: 'Noto Sans TC', sans-serif;
-$default-font-size: 1.6rem;
-
 // Responsive Breakpoints
-$bp-largest: 75em;          // 1200px
-$bp-large: 64.5em;          // 1032px
+$bp-largest: 110em;          // 1760px
+$bp-large: 64em;          // 1024px
 $bp-medium: 52em;           // 832px
 $bp-small: 37.5em;          // 600px
 
@@ -27,13 +22,25 @@ a:visited {
 
 html {
     box-sizing: border-box;
-    font-family: 'Didact Gothic', sans-serif;
+    // font-family: "Galano Grotesque", sans-serif;
     font-size: 62.5%;           // 10px/16px = 62.5% -> 1rem = 10px
-    
+    // overflow: visible;
+
     @media only screen and (max-width: $bp-medium) {
         font-size: 37.5%;       // 6px/16px = 37.5% -> 1rem = 6px
     }
 }
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+/*
+#skrollr-body {
+    // overflow: scroll;
+    // height: 100%;
+}
+*/
 
 #info {
     position: fixed;
@@ -42,15 +49,71 @@ html {
     background-color: rgba(0,0,0,0.5);
     color: #fff;
     padding: 2rem;
-    z-index: 99;
+    z-index: 30;
     font-size: 2rem;
 }
 
 #progressBar {
-    position: fixed;
+    position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     background-color: #fff;
-    width: 1rem;
-    z-index: 999;
+    opacity: 0.5;
+    height: 1rem;
+    // z-index: 30;
+
+    @media only screen and (max-height: $bp-small) {
+        height: 0.6rem;
+    }
+}
+
+.overlay {
+    display: none;
+
+    @media only screen and (orientation: landscape) and (max-width: 900px) {
+        position: fixed;
+        z-index: 40;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        // overflow: auto;
+        background-color: rgba(0,0,0,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#rotateDevice {
+    width: 10rem;
+}
+
+.noise {
+    position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+}
+
+// Snow Effect
+.snow-world {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+	pointer-events: none;
+}
+
+.snow-world .Yoshi_particleEffects {
+	width: 100%;
+	height: 100%;
 }

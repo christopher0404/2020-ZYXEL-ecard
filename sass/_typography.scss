@@ -1,73 +1,97 @@
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url("/fonts/GalanoGrotesque-SemiBold.otf") format("opentype"),
+         url("/fonts/GalanoGrotesque-Regular.otf") format("opentype");
+}
+
+$font: "Galano Grotesque", sans-serif;
+
 .paragraph {
-    font-size: 5rem;
-    font-weight: bold;
+    font-family: $font;
+    font-size: 4.5rem;
     color: #000;
+    z-index: 4;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 4rem;
+    }
 }
 
 .p-page {
     &-1 {
         position: absolute;
-        bottom: 10rem;
-        margin: 0 auto;
+        top: 58rem;
         text-align: center;
-        z-index: 3;
+
+        @media only screen and (max-width: $bp-small) {
+            top: 50rem;
+            width: 30rem;
+        }
     }
 
     &-2 {
         position: absolute;
-        top: 20%;
-        left: 10vw;
-        max-width: 50rem;
+        top: 7%;
+        text-align: center;
 
-        @media only screen and (max-width: $bp-medium) {
-            top: 10%;
-            left: 5vw;
-            max-width: 28rem;
+        @media only screen and (max-width: $bp-small) {
+            width: 38rem;
         }
     }
 
     &-3 {
         position: absolute;
-        top: 10%;
+        top: 7%;
+        text-align: center;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 40rem;
+        }
     }
 
     &-4 {
         position: absolute;
-        top: 10%;
-        // width: 22rem;
+        top: 7%;
+        text-align: center;
         color: #fff;
 
-        @media only screen and (max-width: $bp-medium) {
-            // width: 25.5rem;
+        @media only screen and (max-width: $bp-small) {
+            width: 32rem;
         }
     }
 
     &-5 {
         position: absolute;
-        top: 65%;
-        // width: 50rem;
-        color: #fff;
+        top: 63.5%;
+        text-align: center;
+
+        @media only screen and (max-width: $bp-small) {
+            // top: 3.5%;
+            top: 65.5%;
+            color: #fff;
+        }
     }
 
     &-6 {
         position: absolute;
         top: 37%;
         left: 68vw;
-        color: #000;
 
-        @media only screen and (max-width: $bp-medium) {
-            display: none !important;
+        @media only screen and (max-width: $bp-small) {
+            // top: 50%;
+            top: 63%;
+            left: auto;
+            text-align: center;
         }
     }
 
     &-7 {
         position: absolute;
-        top: 40%;
-        left: 8vw;
-        color: #000;
+        top: 10%;
+        text-align: center;
 
         @media only screen and (max-width: $bp-medium) {
-            display: none !important;
+            top: 7%;
         }
     }
 }
